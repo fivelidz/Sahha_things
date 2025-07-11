@@ -25,12 +25,31 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --bg-dark-gradient: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            --text-color: #333;
+            --text-dark: #e2e8f0;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --card-bg-dark: rgba(30, 41, 59, 0.95);
+            --feature-bg: white;
+            --feature-bg-dark: #1e293b;
+            --feature-card-bg: #f8fafc;
+            --feature-card-bg-dark: #334155;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--text-color);
+            background: var(--bg-gradient);
             min-height: 100vh;
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode {
+            color: var(--text-dark);
+            background: var(--bg-dark-gradient);
         }
 
         .container {
@@ -40,7 +59,7 @@
         }
 
         header {
-            background: rgba(255, 255, 255, 0.95);
+            background: var(--card-bg);
             backdrop-filter: blur(10px);
             padding: 1rem 0;
             position: fixed;
@@ -48,6 +67,12 @@
             top: 0;
             z-index: 1000;
             box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode header {
+            background: var(--card-bg-dark);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
         }
 
         .header-content {
@@ -62,21 +87,52 @@
             color: #6366f1;
         }
 
+        .dark-mode-toggle {
+            background: none;
+            border: 2px solid #6366f1;
+            color: #6366f1;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .dark-mode-toggle:hover {
+            background: #6366f1;
+            color: white;
+        }
+
         .nav-links {
             display: flex;
             gap: 2rem;
             list-style: none;
+            align-items: center;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: #333;
+            color: var(--text-color);
             font-weight: 500;
             transition: color 0.3s;
         }
 
         .nav-links a:hover {
             color: #6366f1;
+        }
+
+        body.dark-mode .nav-links a {
+            color: var(--text-dark);
+        }
+
+        body.dark-mode .dark-mode-toggle {
+            border-color: #10b981;
+            color: #10b981;
+        }
+
+        body.dark-mode .dark-mode-toggle:hover {
+            background: #10b981;
+            color: white;
         }
 
         main {
@@ -125,11 +181,17 @@
         }
 
         .features {
-            background: white;
+            background: var(--feature-bg);
             padding: 4rem 0;
             margin: 2rem 0;
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode .features {
+            background: var(--feature-bg-dark);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
         }
 
         .features-grid {
@@ -141,9 +203,15 @@
 
         .feature-card {
             padding: 2rem;
-            background: #f8fafc;
+            background: var(--feature-card-bg);
             border-radius: 12px;
             border-left: 4px solid #6366f1;
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode .feature-card {
+            background: var(--feature-card-bg-dark);
+            border-left-color: #10b981;
         }
 
         .feature-card h3 {
@@ -296,6 +364,7 @@
                         <li><a href="#use-cases">Use Cases</a></li>
                         <li><a href="#integration">Integration</a></li>
                         <li><a href="#research">Research</a></li>
+                        <li><button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙 Dark</button></li>
                     </ul>
                 </nav>
             </div>
@@ -583,6 +652,33 @@ sahha.patterns.morningHealthCheck({
     </footer>
 
     <script>
+        // Dark mode functionality
+        function toggleDarkMode() {
+            const body = document.body;
+            const toggle = document.querySelector('.dark-mode-toggle');
+            
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+                toggle.innerHTML = '☀️ Light';
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                toggle.innerHTML = '🌙 Dark';
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        }
+
+        // Check for saved dark mode preference
+        document.addEventListener('DOMContentLoaded', () => {
+            const darkMode = localStorage.getItem('darkMode');
+            const toggle = document.querySelector('.dark-mode-toggle');
+            
+            if (darkMode === 'enabled') {
+                document.body.classList.add('dark-mode');
+                toggle.innerHTML = '☀️ Light';
+            }
+        });
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
