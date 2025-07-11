@@ -1,0 +1,6 @@
+node_modules/
+*.log
+.env
+.DS_Store
+data-analysis/*.json
+!data-analysis/discovery-results-latest.json

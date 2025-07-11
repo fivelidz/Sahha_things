@@ -1,0 +1,3699 @@
+{
+  "timestamp": "2025-07-11T17:42:41.117Z",
+  "biomarkers": {
+    "categories": {
+      "sleep": {
+        "available": true,
+        "count": 94,
+        "types": [
+          "sleep_regularity",
+          "sleep_debt",
+          "sleep_in_bed_duration",
+          "sleep_end_time",
+          "sleep_duration",
+          "sleep_start_time",
+          "sleep_mid_time"
+        ],
+        "periodicities": [
+          "weekly",
+          "intraday",
+          "daily"
+        ],
+        "sampleData": [
+          {
+            "id": "839c123e-ffce-5b7c-9528-01697f39061a",
+            "category": "sleep",
+            "type": "sleep_regularity",
+            "periodicity": "weekly",
+            "aggregation": "average",
+            "value": "0.972",
+            "unit": "percentage",
+            "valueType": "double",
+            "startDateTime": "2025-07-03T18:00:00+12:00",
+            "endDateTime": "2025-07-11T17:59:59+12:00"
+          },
+          {
+            "id": "3e049b94-598e-5386-a2c9-7ef6d1844ef0",
+            "category": "sleep",
+            "type": "sleep_debt",
+            "periodicity": "weekly",
+            "aggregation": "total",
+            "value": "0.438",
+            "unit": "hour",
+            "valueType": "double",
+            "startDateTime": "2025-07-03T18:00:00+12:00",
+            "endDateTime": "2025-07-11T17:59:59+12:00"
+          },
+          {
+            "id": "06167c7c-e555-54ca-8d08-f5a4acabb943",
+            "category": "sleep",
+            "type": "sleep_in_bed_duration",
+            "periodicity": "intraday",
+            "aggregation": "total",
+            "value": "480",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-10T18:00:00+12:00",
+            "endDateTime": "2025-07-11T17:59:59+12:00"
+          }
+        ]
+      },
+      "activity": {
+        "available": true,
+        "count": 90,
+        "types": [
+          "steps",
+          "activity_low_intensity_duration",
+          "active_energy_burned",
+          "active_duration",
+          "active_hours",
+          "activity_sedentary_duration"
+        ],
+        "periodicities": [
+          "intraday",
+          "daily"
+        ],
+        "sampleData": [
+          {
+            "id": "c78bc687-2326-5471-8608-fcc1ca14bb4e",
+            "category": "activity",
+            "type": "steps",
+            "periodicity": "intraday",
+            "aggregation": "total",
+            "value": "3263",
+            "unit": "count",
+            "valueType": "integer",
+            "startDateTime": "2025-07-11T00:00:00+12:00",
+            "endDateTime": "2025-07-11T23:59:59+12:00"
+          },
+          {
+            "id": "a3648c7b-3309-5f2a-b151-0ed2d4badca8",
+            "category": "activity",
+            "type": "activity_low_intensity_duration",
+            "periodicity": "intraday",
+            "aggregation": "total",
+            "value": "225",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-11T00:00:00+12:00",
+            "endDateTime": "2025-07-11T23:59:59+12:00"
+          },
+          {
+            "id": "c3215e2e-9e53-5cf8-a60c-aa0228410a6a",
+            "category": "activity",
+            "type": "active_energy_burned",
+            "periodicity": "intraday",
+            "aggregation": "total",
+            "value": "59",
+            "unit": "kcal",
+            "valueType": "integer",
+            "startDateTime": "2025-07-11T00:00:00+12:00",
+            "endDateTime": "2025-07-11T23:59:59+12:00"
+          }
+        ]
+      },
+      "body": {
+        "available": false
+      },
+      "device": {
+        "available": false
+      },
+      "heart": {
+        "available": false
+      },
+      "mental": {
+        "available": false
+      },
+      "nutrition": {
+        "available": false
+      },
+      "environment": {
+        "available": false
+      }
+    },
+    "types": {
+      "sleep_regularity": {
+        "category": "sleep",
+        "unit": "percentage",
+        "valueType": "double",
+        "aggregation": "average",
+        "examples": [
+          {
+            "value": "0.972",
+            "periodicity": "weekly"
+          },
+          {
+            "value": "0.958",
+            "periodicity": "weekly"
+          }
+        ]
+      },
+      "sleep_debt": {
+        "category": "sleep",
+        "unit": "hour",
+        "valueType": "double",
+        "aggregation": "total",
+        "examples": [
+          {
+            "value": "0.438",
+            "periodicity": "weekly"
+          },
+          {
+            "value": "0.438",
+            "periodicity": "weekly"
+          }
+        ]
+      },
+      "sleep_in_bed_duration": {
+        "category": "sleep",
+        "unit": "minute",
+        "valueType": "integer",
+        "aggregation": "total",
+        "examples": [
+          {
+            "value": "480",
+            "periodicity": "intraday"
+          },
+          {
+            "value": "480",
+            "periodicity": "daily"
+          }
+        ]
+      },
+      "sleep_end_time": {
+        "category": "sleep",
+        "unit": "datetime",
+        "valueType": "datetime",
+        "aggregation": "none",
+        "examples": [
+          {
+            "value": "2025-07-11T06:00+12:00",
+            "periodicity": "intraday"
+          },
+          {
+            "value": "2025-07-10T06:00+12:00",
+            "periodicity": "daily"
+          }
+        ]
+      },
+      "sleep_duration": {
+        "category": "sleep",
+        "unit": "minute",
+        "valueType": "integer",
+        "aggregation": "total",
+        "examples": [
+          {
+            "value": "480",
+            "periodicity": "intraday"
+          },
+          {
+            "value": "480",
+            "periodicity": "daily"
+          }
+        ]
+      },
+      "sleep_start_time": {
+        "category": "sleep",
+        "unit": "datetime",
+        "valueType": "datetime",
+        "aggregation": "none",
+        "examples": [
+          {
+            "value": "2025-07-10T22:00+12:00",
+            "periodicity": "intraday"
+          },
+          {
+            "value": "2025-07-09T22:00+12:00",
+            "periodicity": "daily"
+          }
+        ]
+      },
+      "sleep_mid_time": {
+        "category": "sleep",
+        "unit": "datetime",
+        "valueType": "datetime",
+        "aggregation": "none",
+        "examples": [
+          {
+            "value": "2025-07-11T02:00+12:00",
+            "periodicity": "intraday"
+          },
+          {
+            "value": "2025-07-10T02:00+12:00",
+            "periodicity": "daily"
+          }
+        ]
+      },
+      "steps": {
+        "category": "activity",
+        "unit": "count",
+        "valueType": "integer",
+        "aggregation": "total",
+        "examples": [
+          {
+            "value": "3263",
+            "periodicity": "intraday"
+          },
+          {
+            "value": "3106",
+            "periodicity": "daily"
+          }
+        ]
+      },
+      "activity_low_intensity_duration": {
+        "category": "activity",
+        "unit": "minute",
+        "valueType": "integer",
+        "aggregation": "total",
+        "examples": [
+          {
+            "value": "225",
+            "periodicity": "intraday"
+          },
+          {
+            "value": "225",
+            "periodicity": "daily"
+          }
+        ]
+      },
+      "active_energy_burned": {
+        "category": "activity",
+        "unit": "kcal",
+        "valueType": "integer",
+        "aggregation": "total",
+        "examples": [
+          {
+            "value": "59",
+            "periodicity": "intraday"
+          },
+          {
+            "value": "56",
+            "periodicity": "daily"
+          }
+        ]
+      },
+      "active_duration": {
+        "category": "activity",
+        "unit": "minute",
+        "valueType": "integer",
+        "aggregation": "total",
+        "examples": [
+          {
+            "value": "225",
+            "periodicity": "intraday"
+          },
+          {
+            "value": "225",
+            "periodicity": "daily"
+          }
+        ]
+      },
+      "active_hours": {
+        "category": "activity",
+        "unit": "hour",
+        "valueType": "integer",
+        "aggregation": "total",
+        "examples": [
+          {
+            "value": "15",
+            "periodicity": "intraday"
+          },
+          {
+            "value": "15",
+            "periodicity": "daily"
+          }
+        ]
+      },
+      "activity_sedentary_duration": {
+        "category": "activity",
+        "unit": "minute",
+        "valueType": "integer",
+        "aggregation": "total",
+        "examples": [
+          {
+            "value": "735",
+            "periodicity": "intraday"
+          },
+          {
+            "value": "735",
+            "periodicity": "daily"
+          }
+        ]
+      }
+    },
+    "periodicities": {},
+    "successful": [
+      {
+        "success": true,
+        "url": "/api/v1/profile/biomarker/SampleProfile-f106b5e0-4103-41d0-af6e-384f125dbf28?startDateTime=2025-06-01&endDateTime=2025-07-11&categories=sleep",
+        "status": 200,
+        "dataCount": 94,
+        "data": [
+          {
+            "id": "839c123e-ffce-5b7c-9528-01697f39061a",
+            "category": "sleep",
+            "type": "sleep_regularity",
+            "periodicity": "weekly",
+            "aggregation": "average",
+            "value": "0.972",
+            "unit": "percentage",
+            "valueType": "double",
+            "startDateTime": "2025-07-03T18:00:00+12:00",
+            "endDateTime": "2025-07-11T17:59:59+12:00"
+          },
+          {
+            "id": "3e049b94-598e-5386-a2c9-7ef6d1844ef0",
+            "category": "sleep",
+            "type": "sleep_debt",
+            "periodicity": "weekly",
+            "aggregation": "total",
+            "value": "0.438",
+            "unit": "hour",
+            "valueType": "double",
+            "startDateTime": "2025-07-03T18:00:00+12:00",
+            "endDateTime": "2025-07-11T17:59:59+12:00"
+          },
+          {
+            "id": "06167c7c-e555-54ca-8d08-f5a4acabb943",
+            "category": "sleep",
+            "type": "sleep_in_bed_duration",
+            "periodicity": "intraday",
+            "aggregation": "total",
+            "value": "480",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-10T18:00:00+12:00",
+            "endDateTime": "2025-07-11T17:59:59+12:00"
+          },
+          {
+            "id": "d1613525-5245-5d12-9685-93194542a10a",
+            "category": "sleep",
+            "type": "sleep_end_time",
+            "periodicity": "intraday",
+            "aggregation": "none",
+            "value": "2025-07-11T06:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-07-10T18:00:00+12:00",
+            "endDateTime": "2025-07-11T17:59:59+12:00"
+          },
+          {
+            "id": "4a613781-4fb2-5604-9705-8f3b23a8f1ad",
+            "category": "sleep",
+            "type": "sleep_duration",
+            "periodicity": "intraday",
+            "aggregation": "total",
+            "value": "480",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-10T18:00:00+12:00",
+            "endDateTime": "2025-07-11T17:59:59+12:00"
+          },
+          {
+            "id": "fbee22b8-9dc5-59b0-9864-d9a853a0270b",
+            "category": "sleep",
+            "type": "sleep_start_time",
+            "periodicity": "intraday",
+            "aggregation": "none",
+            "value": "2025-07-10T22:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-07-10T18:00:00+12:00",
+            "endDateTime": "2025-07-11T17:59:59+12:00"
+          },
+          {
+            "id": "42a365ed-d057-5bdd-b6ea-36ee4c3e4746",
+            "category": "sleep",
+            "type": "sleep_mid_time",
+            "periodicity": "intraday",
+            "aggregation": "none",
+            "value": "2025-07-11T02:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-07-10T18:00:00+12:00",
+            "endDateTime": "2025-07-11T17:59:59+12:00"
+          },
+          {
+            "id": "76eb9715-0635-5352-a668-3e3d13bdfc5c",
+            "category": "sleep",
+            "type": "sleep_regularity",
+            "periodicity": "weekly",
+            "aggregation": "average",
+            "value": "0.958",
+            "unit": "percentage",
+            "valueType": "double",
+            "startDateTime": "2025-07-02T18:00:00+12:00",
+            "endDateTime": "2025-07-10T17:59:59+12:00"
+          },
+          {
+            "id": "79bb492a-d26c-5697-bf29-a7c3949ec20c",
+            "category": "sleep",
+            "type": "sleep_end_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-07-10T06:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-07-09T18:00:00+12:00",
+            "endDateTime": "2025-07-10T17:59:59+12:00"
+          },
+          {
+            "id": "43a0916b-b55d-564e-a485-62c09c438c1a",
+            "category": "sleep",
+            "type": "sleep_mid_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-07-10T02:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-07-09T18:00:00+12:00",
+            "endDateTime": "2025-07-10T17:59:59+12:00"
+          },
+          {
+            "id": "e5fe3be6-c6e8-5c61-8de6-e0f4db68567a",
+            "category": "sleep",
+            "type": "sleep_in_bed_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "480",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-09T18:00:00+12:00",
+            "endDateTime": "2025-07-10T17:59:59+12:00"
+          },
+          {
+            "id": "da34645e-920e-5001-849e-490d6a626c79",
+            "category": "sleep",
+            "type": "sleep_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "480",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-09T18:00:00+12:00",
+            "endDateTime": "2025-07-10T17:59:59+12:00"
+          },
+          {
+            "id": "7d7f82d6-b4c9-5a2f-be3d-a83d8e6dcbfb",
+            "category": "sleep",
+            "type": "sleep_debt",
+            "periodicity": "weekly",
+            "aggregation": "total",
+            "value": "0.438",
+            "unit": "hour",
+            "valueType": "double",
+            "startDateTime": "2025-07-02T18:00:00+12:00",
+            "endDateTime": "2025-07-10T17:59:59+12:00"
+          },
+          {
+            "id": "e8b24f28-3c28-5b5c-b28d-e031337fbf73",
+            "category": "sleep",
+            "type": "sleep_start_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-07-09T22:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-07-09T18:00:00+12:00",
+            "endDateTime": "2025-07-10T17:59:59+12:00"
+          },
+          {
+            "id": "a7198bb3-fd27-5155-981d-4245e8ae27ec",
+            "category": "sleep",
+            "type": "sleep_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "480",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-08T18:00:00+12:00",
+            "endDateTime": "2025-07-09T17:59:59+12:00"
+          },
+          {
+            "id": "f983480a-2b64-5e64-871c-e476d83c7e36",
+            "category": "sleep",
+            "type": "sleep_start_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-07-08T22:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-07-08T18:00:00+12:00",
+            "endDateTime": "2025-07-09T17:59:59+12:00"
+          },
+          {
+            "id": "4eff1253-814d-5bad-9ace-7a8c1c33bebc",
+            "category": "sleep",
+            "type": "sleep_mid_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-07-09T02:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-07-08T18:00:00+12:00",
+            "endDateTime": "2025-07-09T17:59:59+12:00"
+          },
+          {
+            "id": "1f5e52cd-0d0f-59c6-b38d-e47974f71274",
+            "category": "sleep",
+            "type": "sleep_in_bed_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "480",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-08T18:00:00+12:00",
+            "endDateTime": "2025-07-09T17:59:59+12:00"
+          },
+          {
+            "id": "f28ab2f2-a1e4-5c86-80fd-c1018e320b16",
+            "category": "sleep",
+            "type": "sleep_regularity",
+            "periodicity": "weekly",
+            "aggregation": "average",
+            "value": "0.958",
+            "unit": "percentage",
+            "valueType": "double",
+            "startDateTime": "2025-07-01T18:00:00+12:00",
+            "endDateTime": "2025-07-09T17:59:59+12:00"
+          },
+          {
+            "id": "90654ece-fe98-5369-a779-9eb9cdc87fdd",
+            "category": "sleep",
+            "type": "sleep_end_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-07-09T06:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-07-08T18:00:00+12:00",
+            "endDateTime": "2025-07-09T17:59:59+12:00"
+          },
+          {
+            "id": "a496d1b2-5d15-54b6-81f8-2f05e3082d96",
+            "category": "sleep",
+            "type": "sleep_debt",
+            "periodicity": "weekly",
+            "aggregation": "total",
+            "value": "0.438",
+            "unit": "hour",
+            "valueType": "double",
+            "startDateTime": "2025-07-01T18:00:00+12:00",
+            "endDateTime": "2025-07-09T17:59:59+12:00"
+          },
+          {
+            "id": "27ced125-0e68-5f55-b1ea-d59580497ff0",
+            "category": "sleep",
+            "type": "sleep_start_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-07-07T22:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-07-07T18:00:00+12:00",
+            "endDateTime": "2025-07-08T17:59:59+12:00"
+          },
+          {
+            "id": "7d5f17aa-16bc-50a8-80b9-372e23ebe727",
+            "category": "sleep",
+            "type": "sleep_in_bed_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "480",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-07T18:00:00+12:00",
+            "endDateTime": "2025-07-08T17:59:59+12:00"
+          },
+          {
+            "id": "b570c7b8-d645-5d5f-97c8-cbfac572e23a",
+            "category": "sleep",
+            "type": "sleep_mid_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-07-08T02:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-07-07T18:00:00+12:00",
+            "endDateTime": "2025-07-08T17:59:59+12:00"
+          },
+          {
+            "id": "f13fa237-feff-592f-a2a7-becad0ef9bad",
+            "category": "sleep",
+            "type": "sleep_regularity",
+            "periodicity": "weekly",
+            "aggregation": "average",
+            "value": "0.958",
+            "unit": "percentage",
+            "valueType": "double",
+            "startDateTime": "2025-06-30T18:00:00+12:00",
+            "endDateTime": "2025-07-08T17:59:59+12:00"
+          },
+          {
+            "id": "a276abca-c431-5231-8ab7-f5489b63dd6d",
+            "category": "sleep",
+            "type": "sleep_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "480",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-07T18:00:00+12:00",
+            "endDateTime": "2025-07-08T17:59:59+12:00"
+          },
+          {
+            "id": "a7920d08-a55f-528c-9349-c0da83b829ea",
+            "category": "sleep",
+            "type": "sleep_debt",
+            "periodicity": "weekly",
+            "aggregation": "total",
+            "value": "0.438",
+            "unit": "hour",
+            "valueType": "double",
+            "startDateTime": "2025-06-30T18:00:00+12:00",
+            "endDateTime": "2025-07-08T17:59:59+12:00"
+          },
+          {
+            "id": "2c1850e0-5f72-5a43-9b3b-a0ea56399512",
+            "category": "sleep",
+            "type": "sleep_end_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-07-08T06:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-07-07T18:00:00+12:00",
+            "endDateTime": "2025-07-08T17:59:59+12:00"
+          },
+          {
+            "id": "74df5f13-9952-5cc6-8a36-c28a7050c62e",
+            "category": "sleep",
+            "type": "sleep_end_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-07-07T06:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-07-06T18:00:00+12:00",
+            "endDateTime": "2025-07-07T17:59:59+12:00"
+          },
+          {
+            "id": "04e34887-1aed-5d15-b15a-d505fe6aff1f",
+            "category": "sleep",
+            "type": "sleep_start_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-07-06T23:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-07-06T18:00:00+12:00",
+            "endDateTime": "2025-07-07T17:59:59+12:00"
+          },
+          {
+            "id": "f5536f50-9dd1-54a3-b474-97f784b26d71",
+            "category": "sleep",
+            "type": "sleep_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "420",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-06T18:00:00+12:00",
+            "endDateTime": "2025-07-07T17:59:59+12:00"
+          },
+          {
+            "id": "d2b39d0e-5c4d-586b-b0ff-1e29ac4b13fc",
+            "category": "sleep",
+            "type": "sleep_in_bed_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "420",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-06T18:00:00+12:00",
+            "endDateTime": "2025-07-07T17:59:59+12:00"
+          },
+          {
+            "id": "78cc35e6-5abe-5d50-8176-41d4890bbc9a",
+            "category": "sleep",
+            "type": "sleep_regularity",
+            "periodicity": "weekly",
+            "aggregation": "average",
+            "value": "0.965",
+            "unit": "percentage",
+            "valueType": "double",
+            "startDateTime": "2025-06-29T18:00:00+12:00",
+            "endDateTime": "2025-07-07T17:59:59+12:00"
+          },
+          {
+            "id": "c6e417de-3e18-5d19-b3e3-ff28f05ad0fb",
+            "category": "sleep",
+            "type": "sleep_debt",
+            "periodicity": "weekly",
+            "aggregation": "total",
+            "value": "0.875",
+            "unit": "hour",
+            "valueType": "double",
+            "startDateTime": "2025-06-29T18:00:00+12:00",
+            "endDateTime": "2025-07-07T17:59:59+12:00"
+          },
+          {
+            "id": "03e8649d-2eef-563a-9a21-4609137c2b82",
+            "category": "sleep",
+            "type": "sleep_mid_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-07-07T02:30+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-07-06T18:00:00+12:00",
+            "endDateTime": "2025-07-07T17:59:59+12:00"
+          },
+          {
+            "id": "6d9cea3e-9cbd-5746-8cc1-6a58e3e913c4",
+            "category": "sleep",
+            "type": "sleep_debt",
+            "periodicity": "weekly",
+            "aggregation": "total",
+            "value": "0.438",
+            "unit": "hour",
+            "valueType": "double",
+            "startDateTime": "2025-06-28T18:00:00+12:00",
+            "endDateTime": "2025-07-06T17:59:59+12:00"
+          },
+          {
+            "id": "bcaed4c7-e1bb-5dab-b91d-31eae3fda612",
+            "category": "sleep",
+            "type": "sleep_regularity",
+            "periodicity": "weekly",
+            "aggregation": "average",
+            "value": "0.972",
+            "unit": "percentage",
+            "valueType": "double",
+            "startDateTime": "2025-06-28T18:00:00+12:00",
+            "endDateTime": "2025-07-06T17:59:59+12:00"
+          },
+          {
+            "id": "ff83057e-c680-5bd0-9c75-55ff5b0e22c4",
+            "category": "sleep",
+            "type": "sleep_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "540",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-05T18:00:00+12:00",
+            "endDateTime": "2025-07-06T17:59:59+12:00"
+          },
+          {
+            "id": "03fa2292-b90e-5dab-9045-01c896fa6339",
+            "category": "sleep",
+            "type": "sleep_in_bed_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "540",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-05T18:00:00+12:00",
+            "endDateTime": "2025-07-06T17:59:59+12:00"
+          },
+          {
+            "id": "09adc9c5-bf19-5d64-98d2-efbe2e6ea75e",
+            "category": "sleep",
+            "type": "sleep_start_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-07-05T23:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-07-05T18:00:00+12:00",
+            "endDateTime": "2025-07-06T17:59:59+12:00"
+          },
+          {
+            "id": "4b5f62f1-200e-5276-af0d-98767c9d1edf",
+            "category": "sleep",
+            "type": "sleep_mid_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-07-06T03:30+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-07-05T18:00:00+12:00",
+            "endDateTime": "2025-07-06T17:59:59+12:00"
+          },
+          {
+            "id": "2e71b2a9-5e05-54fa-8b23-5be072a2ecaf",
+            "category": "sleep",
+            "type": "sleep_end_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-07-06T08:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-07-05T18:00:00+12:00",
+            "endDateTime": "2025-07-06T17:59:59+12:00"
+          },
+          {
+            "id": "8b5ae996-f5c1-5fd0-b266-0c01ad6338df",
+            "category": "sleep",
+            "type": "sleep_in_bed_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "600",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-04T18:00:00+12:00",
+            "endDateTime": "2025-07-05T17:59:59+12:00"
+          },
+          {
+            "id": "5e024974-22de-5461-9cf4-dabb3f94de21",
+            "category": "sleep",
+            "type": "sleep_regularity",
+            "periodicity": "weekly",
+            "aggregation": "average",
+            "value": "0.965",
+            "unit": "percentage",
+            "valueType": "double",
+            "startDateTime": "2025-06-27T18:00:00+12:00",
+            "endDateTime": "2025-07-05T17:59:59+12:00"
+          },
+          {
+            "id": "d674d42f-bd30-5d7b-aea5-cda75886f619",
+            "category": "sleep",
+            "type": "sleep_mid_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-07-05T03:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-07-04T18:00:00+12:00",
+            "endDateTime": "2025-07-05T17:59:59+12:00"
+          },
+          {
+            "id": "da26c348-8511-5bd0-a772-78807c2753a3",
+            "category": "sleep",
+            "type": "sleep_start_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-07-04T22:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-07-04T18:00:00+12:00",
+            "endDateTime": "2025-07-05T17:59:59+12:00"
+          },
+          {
+            "id": "c1bac946-05f1-55b8-88c0-fd525023f9b4",
+            "category": "sleep",
+            "type": "sleep_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "600",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-04T18:00:00+12:00",
+            "endDateTime": "2025-07-05T17:59:59+12:00"
+          },
+          {
+            "id": "539ee87b-d766-56a2-bb4e-ee665766086f",
+            "category": "sleep",
+            "type": "sleep_end_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-07-05T08:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-07-04T18:00:00+12:00",
+            "endDateTime": "2025-07-05T17:59:59+12:00"
+          },
+          {
+            "id": "792849c0-e02d-5502-acbc-b7e42c60a24c",
+            "category": "sleep",
+            "type": "sleep_debt",
+            "periodicity": "weekly",
+            "aggregation": "total",
+            "value": "0.438",
+            "unit": "hour",
+            "valueType": "double",
+            "startDateTime": "2025-06-27T18:00:00+12:00",
+            "endDateTime": "2025-07-05T17:59:59+12:00"
+          },
+          {
+            "id": "252c17c3-f3cf-5363-b48e-eeb6cd91def0",
+            "category": "sleep",
+            "type": "sleep_regularity",
+            "periodicity": "weekly",
+            "aggregation": "average",
+            "value": "0.972",
+            "unit": "percentage",
+            "valueType": "double",
+            "startDateTime": "2025-06-26T18:00:00+12:00",
+            "endDateTime": "2025-07-04T17:59:59+12:00"
+          },
+          {
+            "id": "cdf5aea3-658a-5276-9fbc-5e968ff5b5a0",
+            "category": "sleep",
+            "type": "sleep_end_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-07-04T06:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-07-03T18:00:00+12:00",
+            "endDateTime": "2025-07-04T17:59:59+12:00"
+          },
+          {
+            "id": "b6ab3d3c-5086-511e-8c1a-23134a589449",
+            "category": "sleep",
+            "type": "sleep_start_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-07-03T22:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-07-03T18:00:00+12:00",
+            "endDateTime": "2025-07-04T17:59:59+12:00"
+          },
+          {
+            "id": "736d469b-d2c2-5c9c-a9d9-4d39c70a2eae",
+            "category": "sleep",
+            "type": "sleep_in_bed_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "480",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-03T18:00:00+12:00",
+            "endDateTime": "2025-07-04T17:59:59+12:00"
+          },
+          {
+            "id": "d88bb688-401d-500e-92a6-4e09fca859cd",
+            "category": "sleep",
+            "type": "sleep_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "480",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-03T18:00:00+12:00",
+            "endDateTime": "2025-07-04T17:59:59+12:00"
+          },
+          {
+            "id": "0a944a8e-4e62-5553-b0ec-fc6d56a752e8",
+            "category": "sleep",
+            "type": "sleep_mid_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-07-04T02:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-07-03T18:00:00+12:00",
+            "endDateTime": "2025-07-04T17:59:59+12:00"
+          },
+          {
+            "id": "9f5f56ec-3c2d-59c7-a7b7-b2c93641e696",
+            "category": "sleep",
+            "type": "sleep_debt",
+            "periodicity": "weekly",
+            "aggregation": "total",
+            "value": "0.438",
+            "unit": "hour",
+            "valueType": "double",
+            "startDateTime": "2025-06-26T18:00:00+12:00",
+            "endDateTime": "2025-07-04T17:59:59+12:00"
+          },
+          {
+            "id": "ed3d2772-e944-5722-bbf9-69a8315c049d",
+            "category": "sleep",
+            "type": "sleep_start_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-07-02T22:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-07-02T18:00:00+12:00",
+            "endDateTime": "2025-07-03T17:59:59+12:00"
+          },
+          {
+            "id": "17771a72-cda9-57da-8c82-4be151a098ed",
+            "category": "sleep",
+            "type": "sleep_regularity",
+            "periodicity": "weekly",
+            "aggregation": "average",
+            "value": "0.967",
+            "unit": "percentage",
+            "valueType": "double",
+            "startDateTime": "2025-06-25T18:00:00+12:00",
+            "endDateTime": "2025-07-03T17:59:59+12:00"
+          },
+          {
+            "id": "3f6537b7-48ce-52f1-8d41-d2c231f686bf",
+            "category": "sleep",
+            "type": "sleep_end_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-07-03T06:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-07-02T18:00:00+12:00",
+            "endDateTime": "2025-07-03T17:59:59+12:00"
+          },
+          {
+            "id": "c87fd659-da3d-5746-ad34-f72ca44d50de",
+            "category": "sleep",
+            "type": "sleep_debt",
+            "periodicity": "weekly",
+            "aggregation": "total",
+            "value": "0.45",
+            "unit": "hour",
+            "valueType": "double",
+            "startDateTime": "2025-06-25T18:00:00+12:00",
+            "endDateTime": "2025-07-03T17:59:59+12:00"
+          },
+          {
+            "id": "52b33cf3-15e1-5e5f-ad72-47460bab7d42",
+            "category": "sleep",
+            "type": "sleep_mid_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-07-03T02:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-07-02T18:00:00+12:00",
+            "endDateTime": "2025-07-03T17:59:59+12:00"
+          },
+          {
+            "id": "5a6bcdba-6ba4-545a-95bf-b555dc55c60f",
+            "category": "sleep",
+            "type": "sleep_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "480",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-02T18:00:00+12:00",
+            "endDateTime": "2025-07-03T17:59:59+12:00"
+          },
+          {
+            "id": "ef960015-a278-5db2-aa63-d8d293709b1b",
+            "category": "sleep",
+            "type": "sleep_in_bed_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "480",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-02T18:00:00+12:00",
+            "endDateTime": "2025-07-03T17:59:59+12:00"
+          },
+          {
+            "id": "78812b91-8754-5497-b475-16934c0d4494",
+            "category": "sleep",
+            "type": "sleep_in_bed_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "480",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-01T18:00:00+12:00",
+            "endDateTime": "2025-07-02T17:59:59+12:00"
+          },
+          {
+            "id": "4c4a4d5a-6b2b-5bcd-879d-10db27d4691b",
+            "category": "sleep",
+            "type": "sleep_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "480",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-01T18:00:00+12:00",
+            "endDateTime": "2025-07-02T17:59:59+12:00"
+          },
+          {
+            "id": "ddd5aac0-d740-5944-9a9c-2514639d645a",
+            "category": "sleep",
+            "type": "sleep_end_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-07-02T06:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-07-01T18:00:00+12:00",
+            "endDateTime": "2025-07-02T17:59:59+12:00"
+          },
+          {
+            "id": "b5946ac7-9a27-59e5-b64f-e7ab9850a099",
+            "category": "sleep",
+            "type": "sleep_debt",
+            "periodicity": "weekly",
+            "aggregation": "total",
+            "value": "0.469",
+            "unit": "hour",
+            "valueType": "double",
+            "startDateTime": "2025-06-24T18:00:00+12:00",
+            "endDateTime": "2025-07-02T17:59:59+12:00"
+          },
+          {
+            "id": "08868565-1f2c-5e36-8323-394781487463",
+            "category": "sleep",
+            "type": "sleep_regularity",
+            "periodicity": "weekly",
+            "aggregation": "average",
+            "value": "0.958",
+            "unit": "percentage",
+            "valueType": "double",
+            "startDateTime": "2025-06-24T18:00:00+12:00",
+            "endDateTime": "2025-07-02T17:59:59+12:00"
+          },
+          {
+            "id": "22298e70-027a-5b77-abe6-3ec74c8e7845",
+            "category": "sleep",
+            "type": "sleep_mid_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-07-02T02:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-07-01T18:00:00+12:00",
+            "endDateTime": "2025-07-02T17:59:59+12:00"
+          },
+          {
+            "id": "8b5e1e95-4813-5c8d-bfc5-834b8f9d570b",
+            "category": "sleep",
+            "type": "sleep_start_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-07-01T22:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-07-01T18:00:00+12:00",
+            "endDateTime": "2025-07-02T17:59:59+12:00"
+          },
+          {
+            "id": "fd8bfdca-115f-5961-bc0f-ae6f2e45a768",
+            "category": "sleep",
+            "type": "sleep_in_bed_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "480",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-06-30T18:00:00+12:00",
+            "endDateTime": "2025-07-01T17:59:59+12:00"
+          },
+          {
+            "id": "58b1c941-591b-50b1-8966-b18fdda62324",
+            "category": "sleep",
+            "type": "sleep_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "480",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-06-30T18:00:00+12:00",
+            "endDateTime": "2025-07-01T17:59:59+12:00"
+          },
+          {
+            "id": "3be9fb61-3ded-580b-bd7b-f10f3c86890c",
+            "category": "sleep",
+            "type": "sleep_start_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-06-30T22:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-06-30T18:00:00+12:00",
+            "endDateTime": "2025-07-01T17:59:59+12:00"
+          },
+          {
+            "id": "ddb17b3d-3cae-5da1-a94a-28b7393740ed",
+            "category": "sleep",
+            "type": "sleep_debt",
+            "periodicity": "weekly",
+            "aggregation": "total",
+            "value": "0.5",
+            "unit": "hour",
+            "valueType": "double",
+            "startDateTime": "2025-06-23T18:00:00+12:00",
+            "endDateTime": "2025-07-01T17:59:59+12:00"
+          },
+          {
+            "id": "933629e3-9417-5062-8433-824c8c49473f",
+            "category": "sleep",
+            "type": "sleep_regularity",
+            "periodicity": "weekly",
+            "aggregation": "average",
+            "value": "0.944",
+            "unit": "percentage",
+            "valueType": "double",
+            "startDateTime": "2025-06-23T18:00:00+12:00",
+            "endDateTime": "2025-07-01T17:59:59+12:00"
+          },
+          {
+            "id": "39b199b9-6d02-54d4-b6bf-d806b9cb439f",
+            "category": "sleep",
+            "type": "sleep_mid_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-07-01T02:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-06-30T18:00:00+12:00",
+            "endDateTime": "2025-07-01T17:59:59+12:00"
+          },
+          {
+            "id": "7960ebfb-b79e-5878-8d60-9f9799509994",
+            "category": "sleep",
+            "type": "sleep_end_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-07-01T06:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-06-30T18:00:00+12:00",
+            "endDateTime": "2025-07-01T17:59:59+12:00"
+          },
+          {
+            "id": "f4d18b59-d306-59c2-9ce6-da18d04af18b",
+            "category": "sleep",
+            "type": "sleep_in_bed_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "420",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-06-29T18:00:00+12:00",
+            "endDateTime": "2025-06-30T17:59:59+12:00"
+          },
+          {
+            "id": "2da73f16-7bab-5b59-90a3-f4cd4c392c13",
+            "category": "sleep",
+            "type": "sleep_regularity",
+            "periodicity": "weekly",
+            "aggregation": "average",
+            "value": "0.938",
+            "unit": "percentage",
+            "valueType": "double",
+            "startDateTime": "2025-06-22T18:00:00+12:00",
+            "endDateTime": "2025-06-30T17:59:59+12:00"
+          },
+          {
+            "id": "0f4a7bd2-196c-54f5-a860-61eb8746c1df",
+            "category": "sleep",
+            "type": "sleep_start_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-06-29T23:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-06-29T18:00:00+12:00",
+            "endDateTime": "2025-06-30T17:59:59+12:00"
+          },
+          {
+            "id": "bae6ed57-6d66-586a-816e-739f05306edd",
+            "category": "sleep",
+            "type": "sleep_end_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-06-30T06:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-06-29T18:00:00+12:00",
+            "endDateTime": "2025-06-30T17:59:59+12:00"
+          },
+          {
+            "id": "2d78b193-9e03-5cae-8227-be8e2d95f7dc",
+            "category": "sleep",
+            "type": "sleep_debt",
+            "periodicity": "weekly",
+            "aggregation": "total",
+            "value": "0.375",
+            "unit": "hour",
+            "valueType": "double",
+            "startDateTime": "2025-06-22T18:00:00+12:00",
+            "endDateTime": "2025-06-30T17:59:59+12:00"
+          },
+          {
+            "id": "4126a498-1e2c-547f-973a-8aa6628af9d3",
+            "category": "sleep",
+            "type": "sleep_mid_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-06-30T02:30+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-06-29T18:00:00+12:00",
+            "endDateTime": "2025-06-30T17:59:59+12:00"
+          },
+          {
+            "id": "786b19d2-46ff-5a60-8c9e-bf5671c3da06",
+            "category": "sleep",
+            "type": "sleep_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "420",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-06-29T18:00:00+12:00",
+            "endDateTime": "2025-06-30T17:59:59+12:00"
+          },
+          {
+            "id": "5cf116cb-2f22-5013-9b32-d3fb01f1ca45",
+            "category": "sleep",
+            "type": "sleep_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "540",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-06-28T18:00:00+12:00",
+            "endDateTime": "2025-06-29T17:59:59+12:00"
+          },
+          {
+            "id": "38fe43a0-9679-5448-b1b3-27b66aeda95f",
+            "category": "sleep",
+            "type": "sleep_end_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-06-29T08:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-06-28T18:00:00+12:00",
+            "endDateTime": "2025-06-29T17:59:59+12:00"
+          },
+          {
+            "id": "98061d12-afe9-589d-a32d-b071cbfc62c8",
+            "category": "sleep",
+            "type": "sleep_start_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-06-28T23:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-06-28T18:00:00+12:00",
+            "endDateTime": "2025-06-29T17:59:59+12:00"
+          },
+          {
+            "id": "b4d19d10-a887-5981-97aa-47f6e96c3af5",
+            "category": "sleep",
+            "type": "sleep_in_bed_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "540",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-06-28T18:00:00+12:00",
+            "endDateTime": "2025-06-29T17:59:59+12:00"
+          },
+          {
+            "id": "a0b7c446-f95d-524b-a5b3-f6cd97a6aada",
+            "category": "sleep",
+            "type": "sleep_mid_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-06-29T03:30+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-06-28T18:00:00+12:00",
+            "endDateTime": "2025-06-29T17:59:59+12:00"
+          },
+          {
+            "id": "7fa14b23-7060-563a-aec6-9637ee1365a0",
+            "category": "sleep",
+            "type": "sleep_end_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-06-28T08:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-06-27T18:00:00+12:00",
+            "endDateTime": "2025-06-28T17:59:59+12:00"
+          },
+          {
+            "id": "02da2d71-7a99-5617-a438-ddef2705822e",
+            "category": "sleep",
+            "type": "sleep_in_bed_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "600",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-06-27T18:00:00+12:00",
+            "endDateTime": "2025-06-28T17:59:59+12:00"
+          },
+          {
+            "id": "9a5ce3fd-ec3b-536f-960b-9776ca6d2b9f",
+            "category": "sleep",
+            "type": "sleep_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "600",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-06-27T18:00:00+12:00",
+            "endDateTime": "2025-06-28T17:59:59+12:00"
+          },
+          {
+            "id": "6dceac8b-9363-5d50-b145-5f240bdffe3b",
+            "category": "sleep",
+            "type": "sleep_mid_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-06-28T03:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-06-27T18:00:00+12:00",
+            "endDateTime": "2025-06-28T17:59:59+12:00"
+          },
+          {
+            "id": "21e05935-4a92-5d05-a5e4-024b39153e67",
+            "category": "sleep",
+            "type": "sleep_start_time",
+            "periodicity": "daily",
+            "aggregation": "none",
+            "value": "2025-06-27T22:00+12:00",
+            "unit": "datetime",
+            "valueType": "datetime",
+            "startDateTime": "2025-06-27T18:00:00+12:00",
+            "endDateTime": "2025-06-28T17:59:59+12:00"
+          }
+        ],
+        "timestamp": "2025-07-11T17:42:42.601Z"
+      },
+      {
+        "success": true,
+        "url": "/api/v1/profile/biomarker/SampleProfile-f106b5e0-4103-41d0-af6e-384f125dbf28?startDateTime=2025-06-01&endDateTime=2025-07-11&categories=activity",
+        "status": 200,
+        "dataCount": 90,
+        "data": [
+          {
+            "id": "c78bc687-2326-5471-8608-fcc1ca14bb4e",
+            "category": "activity",
+            "type": "steps",
+            "periodicity": "intraday",
+            "aggregation": "total",
+            "value": "3263",
+            "unit": "count",
+            "valueType": "integer",
+            "startDateTime": "2025-07-11T00:00:00+12:00",
+            "endDateTime": "2025-07-11T23:59:59+12:00"
+          },
+          {
+            "id": "a3648c7b-3309-5f2a-b151-0ed2d4badca8",
+            "category": "activity",
+            "type": "activity_low_intensity_duration",
+            "periodicity": "intraday",
+            "aggregation": "total",
+            "value": "225",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-11T00:00:00+12:00",
+            "endDateTime": "2025-07-11T23:59:59+12:00"
+          },
+          {
+            "id": "c3215e2e-9e53-5cf8-a60c-aa0228410a6a",
+            "category": "activity",
+            "type": "active_energy_burned",
+            "periodicity": "intraday",
+            "aggregation": "total",
+            "value": "59",
+            "unit": "kcal",
+            "valueType": "integer",
+            "startDateTime": "2025-07-11T00:00:00+12:00",
+            "endDateTime": "2025-07-11T23:59:59+12:00"
+          },
+          {
+            "id": "d3a25326-a1a3-585c-b304-ca44c9d14b96",
+            "category": "activity",
+            "type": "active_duration",
+            "periodicity": "intraday",
+            "aggregation": "total",
+            "value": "225",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-11T00:00:00+12:00",
+            "endDateTime": "2025-07-11T23:59:59+12:00"
+          },
+          {
+            "id": "a1199b44-07dc-50d7-a39c-c1bb3753c5c4",
+            "category": "activity",
+            "type": "active_hours",
+            "periodicity": "intraday",
+            "aggregation": "total",
+            "value": "15",
+            "unit": "hour",
+            "valueType": "integer",
+            "startDateTime": "2025-07-11T00:00:00+12:00",
+            "endDateTime": "2025-07-11T23:59:59+12:00"
+          },
+          {
+            "id": "baa37b35-9f09-51eb-bce1-ebc2b4c9c7e9",
+            "category": "activity",
+            "type": "activity_sedentary_duration",
+            "periodicity": "intraday",
+            "aggregation": "total",
+            "value": "735",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-11T00:00:00+12:00",
+            "endDateTime": "2025-07-11T23:59:59+12:00"
+          },
+          {
+            "id": "73774230-1642-595b-a756-b1995a593611",
+            "category": "activity",
+            "type": "activity_low_intensity_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "225",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-10T00:00:00+12:00",
+            "endDateTime": "2025-07-10T23:59:59+12:00"
+          },
+          {
+            "id": "5869553a-5137-5efa-a81b-7f2521872535",
+            "category": "activity",
+            "type": "active_hours",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "15",
+            "unit": "hour",
+            "valueType": "integer",
+            "startDateTime": "2025-07-10T00:00:00+12:00",
+            "endDateTime": "2025-07-10T23:59:59+12:00"
+          },
+          {
+            "id": "61b27d0a-3cf1-50df-a7db-f1bb2f316f47",
+            "category": "activity",
+            "type": "activity_sedentary_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "735",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-10T00:00:00+12:00",
+            "endDateTime": "2025-07-10T23:59:59+12:00"
+          },
+          {
+            "id": "91e7760e-e865-519b-8773-6cec1ea58bce",
+            "category": "activity",
+            "type": "steps",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "3106",
+            "unit": "count",
+            "valueType": "integer",
+            "startDateTime": "2025-07-10T00:00:00+12:00",
+            "endDateTime": "2025-07-10T23:59:59+12:00"
+          },
+          {
+            "id": "d5d850af-5a3a-5181-855b-1d8bde906bd2",
+            "category": "activity",
+            "type": "active_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "225",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-10T00:00:00+12:00",
+            "endDateTime": "2025-07-10T23:59:59+12:00"
+          },
+          {
+            "id": "4edf4d91-d114-5367-a528-673a2f9ee748",
+            "category": "activity",
+            "type": "active_energy_burned",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "56",
+            "unit": "kcal",
+            "valueType": "integer",
+            "startDateTime": "2025-07-10T00:00:00+12:00",
+            "endDateTime": "2025-07-10T23:59:59+12:00"
+          },
+          {
+            "id": "f06ff2a3-0898-5a46-b12d-801d5527ad54",
+            "category": "activity",
+            "type": "active_energy_burned",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "50",
+            "unit": "kcal",
+            "valueType": "integer",
+            "startDateTime": "2025-07-09T00:00:00+12:00",
+            "endDateTime": "2025-07-09T23:59:59+12:00"
+          },
+          {
+            "id": "0023c02e-7857-5de4-b973-ea516606715c",
+            "category": "activity",
+            "type": "activity_sedentary_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "735",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-09T00:00:00+12:00",
+            "endDateTime": "2025-07-09T23:59:59+12:00"
+          },
+          {
+            "id": "313acc27-7996-53ad-b74f-a93f21ac56e6",
+            "category": "activity",
+            "type": "steps",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "2834",
+            "unit": "count",
+            "valueType": "integer",
+            "startDateTime": "2025-07-09T00:00:00+12:00",
+            "endDateTime": "2025-07-09T23:59:59+12:00"
+          },
+          {
+            "id": "2af60c1a-eca2-531b-a3e0-cbee16ea6b47",
+            "category": "activity",
+            "type": "active_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "225",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-09T00:00:00+12:00",
+            "endDateTime": "2025-07-09T23:59:59+12:00"
+          },
+          {
+            "id": "9d7aca61-f565-5913-80c5-97492226bb0a",
+            "category": "activity",
+            "type": "activity_low_intensity_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "225",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-09T00:00:00+12:00",
+            "endDateTime": "2025-07-09T23:59:59+12:00"
+          },
+          {
+            "id": "3d53768b-b459-5fde-ba3d-2f6412b3eff4",
+            "category": "activity",
+            "type": "active_hours",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "15",
+            "unit": "hour",
+            "valueType": "integer",
+            "startDateTime": "2025-07-09T00:00:00+12:00",
+            "endDateTime": "2025-07-09T23:59:59+12:00"
+          },
+          {
+            "id": "d468871b-aaaa-5d24-b5d1-4d3d194c6fe6",
+            "category": "activity",
+            "type": "active_energy_burned",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "55",
+            "unit": "kcal",
+            "valueType": "integer",
+            "startDateTime": "2025-07-08T00:00:00+12:00",
+            "endDateTime": "2025-07-08T23:59:59+12:00"
+          },
+          {
+            "id": "b56f5ba5-5481-5954-8219-599f568a67e9",
+            "category": "activity",
+            "type": "active_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "225",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-08T00:00:00+12:00",
+            "endDateTime": "2025-07-08T23:59:59+12:00"
+          },
+          {
+            "id": "cce59f2c-d916-55c9-9cad-118dd47392f8",
+            "category": "activity",
+            "type": "activity_low_intensity_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "225",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-08T00:00:00+12:00",
+            "endDateTime": "2025-07-08T23:59:59+12:00"
+          },
+          {
+            "id": "d2a3f458-c0aa-5206-abe8-1b5b0d36d94f",
+            "category": "activity",
+            "type": "activity_sedentary_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "735",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-08T00:00:00+12:00",
+            "endDateTime": "2025-07-08T23:59:59+12:00"
+          },
+          {
+            "id": "942b5742-b31c-54a8-969d-d89c252d8818",
+            "category": "activity",
+            "type": "steps",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "3078",
+            "unit": "count",
+            "valueType": "integer",
+            "startDateTime": "2025-07-08T00:00:00+12:00",
+            "endDateTime": "2025-07-08T23:59:59+12:00"
+          },
+          {
+            "id": "eac81828-e48d-5b6d-b03d-989aea203278",
+            "category": "activity",
+            "type": "active_hours",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "15",
+            "unit": "hour",
+            "valueType": "integer",
+            "startDateTime": "2025-07-08T00:00:00+12:00",
+            "endDateTime": "2025-07-08T23:59:59+12:00"
+          },
+          {
+            "id": "a18603ec-055c-5b75-81f0-8688b1f7aa08",
+            "category": "activity",
+            "type": "active_hours",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "15",
+            "unit": "hour",
+            "valueType": "integer",
+            "startDateTime": "2025-07-07T00:00:00+12:00",
+            "endDateTime": "2025-07-07T23:59:59+12:00"
+          },
+          {
+            "id": "15ede841-5f57-5b2b-9946-eaebf7116e8d",
+            "category": "activity",
+            "type": "activity_sedentary_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "795",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-07T00:00:00+12:00",
+            "endDateTime": "2025-07-07T23:59:59+12:00"
+          },
+          {
+            "id": "aa3cbb54-e1b1-516a-a787-ed2b50b186a6",
+            "category": "activity",
+            "type": "steps",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "3354",
+            "unit": "count",
+            "valueType": "integer",
+            "startDateTime": "2025-07-07T00:00:00+12:00",
+            "endDateTime": "2025-07-07T23:59:59+12:00"
+          },
+          {
+            "id": "7f1443a5-7a00-5128-b8b2-3aec7b85c8ed",
+            "category": "activity",
+            "type": "active_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "225",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-07T00:00:00+12:00",
+            "endDateTime": "2025-07-07T23:59:59+12:00"
+          },
+          {
+            "id": "6eff7ed2-e60e-584a-b48d-0979305c6df5",
+            "category": "activity",
+            "type": "activity_low_intensity_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "225",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-07T00:00:00+12:00",
+            "endDateTime": "2025-07-07T23:59:59+12:00"
+          },
+          {
+            "id": "74eb0ac6-3f92-5c4c-b801-50fe399a8c31",
+            "category": "activity",
+            "type": "active_energy_burned",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "60",
+            "unit": "kcal",
+            "valueType": "integer",
+            "startDateTime": "2025-07-07T00:00:00+12:00",
+            "endDateTime": "2025-07-07T23:59:59+12:00"
+          },
+          {
+            "id": "edfd88ca-ead7-5211-a42e-e4d04e8e2ccd",
+            "category": "activity",
+            "type": "active_energy_burned",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "20",
+            "unit": "kcal",
+            "valueType": "integer",
+            "startDateTime": "2025-07-06T00:00:00+12:00",
+            "endDateTime": "2025-07-06T23:59:59+12:00"
+          },
+          {
+            "id": "b195daa4-aefe-59a3-b02e-a1d0135cea4d",
+            "category": "activity",
+            "type": "activity_sedentary_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "810",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-06T00:00:00+12:00",
+            "endDateTime": "2025-07-06T23:59:59+12:00"
+          },
+          {
+            "id": "f3f575b1-e79b-5aa9-8752-44026972a92e",
+            "category": "activity",
+            "type": "steps",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "1155",
+            "unit": "count",
+            "valueType": "integer",
+            "startDateTime": "2025-07-06T00:00:00+12:00",
+            "endDateTime": "2025-07-06T23:59:59+12:00"
+          },
+          {
+            "id": "47702553-c30b-5f23-a378-bca542fd5188",
+            "category": "activity",
+            "type": "active_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "90",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-06T00:00:00+12:00",
+            "endDateTime": "2025-07-06T23:59:59+12:00"
+          },
+          {
+            "id": "e2eba0be-3286-58f2-8e8c-a44f9a9621c2",
+            "category": "activity",
+            "type": "activity_low_intensity_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "90",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-06T00:00:00+12:00",
+            "endDateTime": "2025-07-06T23:59:59+12:00"
+          },
+          {
+            "id": "c6613c86-3249-5735-a49f-0eca86f5ad6f",
+            "category": "activity",
+            "type": "active_hours",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "6",
+            "unit": "hour",
+            "valueType": "integer",
+            "startDateTime": "2025-07-06T00:00:00+12:00",
+            "endDateTime": "2025-07-06T23:59:59+12:00"
+          },
+          {
+            "id": "42e98619-9492-583f-b413-907e04092054",
+            "category": "activity",
+            "type": "activity_low_intensity_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "90",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-05T00:00:00+12:00",
+            "endDateTime": "2025-07-05T23:59:59+12:00"
+          },
+          {
+            "id": "3d8a0136-fbf6-5a28-84e7-01481a391e40",
+            "category": "activity",
+            "type": "activity_sedentary_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "750",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-05T00:00:00+12:00",
+            "endDateTime": "2025-07-05T23:59:59+12:00"
+          },
+          {
+            "id": "c427abb7-b212-5880-8b5d-6740e5f9de43",
+            "category": "activity",
+            "type": "steps",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "1258",
+            "unit": "count",
+            "valueType": "integer",
+            "startDateTime": "2025-07-05T00:00:00+12:00",
+            "endDateTime": "2025-07-05T23:59:59+12:00"
+          },
+          {
+            "id": "b8866d1f-758d-52ef-b295-915f380f5be2",
+            "category": "activity",
+            "type": "active_hours",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "6",
+            "unit": "hour",
+            "valueType": "integer",
+            "startDateTime": "2025-07-05T00:00:00+12:00",
+            "endDateTime": "2025-07-05T23:59:59+12:00"
+          },
+          {
+            "id": "13494218-fbb4-5449-8c0c-b66837a652f6",
+            "category": "activity",
+            "type": "active_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "90",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-05T00:00:00+12:00",
+            "endDateTime": "2025-07-05T23:59:59+12:00"
+          },
+          {
+            "id": "4b1d203d-15bc-5424-af82-40cb99db784f",
+            "category": "activity",
+            "type": "active_energy_burned",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "22",
+            "unit": "kcal",
+            "valueType": "integer",
+            "startDateTime": "2025-07-05T00:00:00+12:00",
+            "endDateTime": "2025-07-05T23:59:59+12:00"
+          },
+          {
+            "id": "89499756-0e0b-515c-8ad2-011412db21a9",
+            "category": "activity",
+            "type": "active_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "225",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-04T00:00:00+12:00",
+            "endDateTime": "2025-07-04T23:59:59+12:00"
+          },
+          {
+            "id": "eb63cf5c-5305-5278-9e7a-60a357d0dd40",
+            "category": "activity",
+            "type": "active_hours",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "15",
+            "unit": "hour",
+            "valueType": "integer",
+            "startDateTime": "2025-07-04T00:00:00+12:00",
+            "endDateTime": "2025-07-04T23:59:59+12:00"
+          },
+          {
+            "id": "63bc28ee-b474-5260-958c-45e91ffd8721",
+            "category": "activity",
+            "type": "active_energy_burned",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "54",
+            "unit": "kcal",
+            "valueType": "integer",
+            "startDateTime": "2025-07-04T00:00:00+12:00",
+            "endDateTime": "2025-07-04T23:59:59+12:00"
+          },
+          {
+            "id": "6184cccd-a1c6-54d9-b1e1-ba340d6e527b",
+            "category": "activity",
+            "type": "activity_low_intensity_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "225",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-04T00:00:00+12:00",
+            "endDateTime": "2025-07-04T23:59:59+12:00"
+          },
+          {
+            "id": "d063bade-ac22-51c5-96f6-740277a432ed",
+            "category": "activity",
+            "type": "steps",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "3014",
+            "unit": "count",
+            "valueType": "integer",
+            "startDateTime": "2025-07-04T00:00:00+12:00",
+            "endDateTime": "2025-07-04T23:59:59+12:00"
+          },
+          {
+            "id": "e2182be7-5b24-5e0f-a5bf-2d3d0be11b2d",
+            "category": "activity",
+            "type": "activity_sedentary_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "735",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-04T00:00:00+12:00",
+            "endDateTime": "2025-07-04T23:59:59+12:00"
+          },
+          {
+            "id": "64ba2c1c-c308-5fb4-8833-5faa968857be",
+            "category": "activity",
+            "type": "active_hours",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "15",
+            "unit": "hour",
+            "valueType": "integer",
+            "startDateTime": "2025-07-03T00:00:00+12:00",
+            "endDateTime": "2025-07-03T23:59:59+12:00"
+          },
+          {
+            "id": "8f5894a7-5257-5095-8c08-f892aa743997",
+            "category": "activity",
+            "type": "activity_sedentary_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "735",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-03T00:00:00+12:00",
+            "endDateTime": "2025-07-03T23:59:59+12:00"
+          },
+          {
+            "id": "c023814c-0dd5-5a58-a0a1-0b509c4af3a7",
+            "category": "activity",
+            "type": "steps",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "3090",
+            "unit": "count",
+            "valueType": "integer",
+            "startDateTime": "2025-07-03T00:00:00+12:00",
+            "endDateTime": "2025-07-03T23:59:59+12:00"
+          },
+          {
+            "id": "3499ffaa-6855-545c-83f5-42b3782460ce",
+            "category": "activity",
+            "type": "active_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "225",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-03T00:00:00+12:00",
+            "endDateTime": "2025-07-03T23:59:59+12:00"
+          },
+          {
+            "id": "72d5a921-ba03-5c03-89de-41a93af09c07",
+            "category": "activity",
+            "type": "activity_low_intensity_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "225",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-03T00:00:00+12:00",
+            "endDateTime": "2025-07-03T23:59:59+12:00"
+          },
+          {
+            "id": "91407895-44c0-5182-8800-9204f4060d1b",
+            "category": "activity",
+            "type": "active_energy_burned",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "55",
+            "unit": "kcal",
+            "valueType": "integer",
+            "startDateTime": "2025-07-03T00:00:00+12:00",
+            "endDateTime": "2025-07-03T23:59:59+12:00"
+          },
+          {
+            "id": "9630cb2e-f2af-5c0e-aa39-a0dea7122d21",
+            "category": "activity",
+            "type": "active_energy_burned",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "57",
+            "unit": "kcal",
+            "valueType": "integer",
+            "startDateTime": "2025-07-02T00:00:00+12:00",
+            "endDateTime": "2025-07-02T23:59:59+12:00"
+          },
+          {
+            "id": "0932521f-8607-56cb-935e-2548d5558183",
+            "category": "activity",
+            "type": "activity_sedentary_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "735",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-02T00:00:00+12:00",
+            "endDateTime": "2025-07-02T23:59:59+12:00"
+          },
+          {
+            "id": "b1feb054-de72-5752-bb1e-9ecb4315260c",
+            "category": "activity",
+            "type": "steps",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "3202",
+            "unit": "count",
+            "valueType": "integer",
+            "startDateTime": "2025-07-02T00:00:00+12:00",
+            "endDateTime": "2025-07-02T23:59:59+12:00"
+          },
+          {
+            "id": "cca825ff-ab2c-5fe7-9a5d-f8683fb498d3",
+            "category": "activity",
+            "type": "active_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "225",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-02T00:00:00+12:00",
+            "endDateTime": "2025-07-02T23:59:59+12:00"
+          },
+          {
+            "id": "df8ab13c-e2e8-5758-926f-a1b9d4b5bbd5",
+            "category": "activity",
+            "type": "activity_low_intensity_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "225",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-02T00:00:00+12:00",
+            "endDateTime": "2025-07-02T23:59:59+12:00"
+          },
+          {
+            "id": "27bf1878-6203-5543-b3b9-ae6956bee353",
+            "category": "activity",
+            "type": "active_hours",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "15",
+            "unit": "hour",
+            "valueType": "integer",
+            "startDateTime": "2025-07-02T00:00:00+12:00",
+            "endDateTime": "2025-07-02T23:59:59+12:00"
+          },
+          {
+            "id": "8e37a2dd-7829-5c13-82ee-764ebedceb60",
+            "category": "activity",
+            "type": "active_energy_burned",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "48",
+            "unit": "kcal",
+            "valueType": "integer",
+            "startDateTime": "2025-07-01T00:00:00+12:00",
+            "endDateTime": "2025-07-01T23:59:59+12:00"
+          },
+          {
+            "id": "c1a170d0-509c-5fbf-b903-cf261f1bde49",
+            "category": "activity",
+            "type": "activity_sedentary_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "735",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-01T00:00:00+12:00",
+            "endDateTime": "2025-07-01T23:59:59+12:00"
+          },
+          {
+            "id": "f0e24c44-ed59-5a6e-a8df-8ff16b97b029",
+            "category": "activity",
+            "type": "steps",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "2739",
+            "unit": "count",
+            "valueType": "integer",
+            "startDateTime": "2025-07-01T00:00:00+12:00",
+            "endDateTime": "2025-07-01T23:59:59+12:00"
+          },
+          {
+            "id": "3d994e05-cf64-572b-a2b7-b5b892d5aaf2",
+            "category": "activity",
+            "type": "active_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "225",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-01T00:00:00+12:00",
+            "endDateTime": "2025-07-01T23:59:59+12:00"
+          },
+          {
+            "id": "869fcd83-c19a-546b-88be-94a26d5fd60b",
+            "category": "activity",
+            "type": "activity_low_intensity_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "225",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-07-01T00:00:00+12:00",
+            "endDateTime": "2025-07-01T23:59:59+12:00"
+          },
+          {
+            "id": "cad3fdbc-91ef-550c-a61c-f6f1486dcb1f",
+            "category": "activity",
+            "type": "active_hours",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "15",
+            "unit": "hour",
+            "valueType": "integer",
+            "startDateTime": "2025-07-01T00:00:00+12:00",
+            "endDateTime": "2025-07-01T23:59:59+12:00"
+          },
+          {
+            "id": "752412aa-99f6-540b-bcd0-60dd9d9d6bfa",
+            "category": "activity",
+            "type": "active_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "225",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-06-30T00:00:00+12:00",
+            "endDateTime": "2025-06-30T23:59:59+12:00"
+          },
+          {
+            "id": "70176153-ba5e-5429-a99d-3383d7faff33",
+            "category": "activity",
+            "type": "activity_sedentary_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "795",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-06-30T00:00:00+12:00",
+            "endDateTime": "2025-06-30T23:59:59+12:00"
+          },
+          {
+            "id": "ba84f7bd-79c2-5704-a05b-25d957874824",
+            "category": "activity",
+            "type": "steps",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "3106",
+            "unit": "count",
+            "valueType": "integer",
+            "startDateTime": "2025-06-30T00:00:00+12:00",
+            "endDateTime": "2025-06-30T23:59:59+12:00"
+          },
+          {
+            "id": "4bdba8f3-7149-57e9-b5e2-247b86ce80c6",
+            "category": "activity",
+            "type": "activity_low_intensity_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "225",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-06-30T00:00:00+12:00",
+            "endDateTime": "2025-06-30T23:59:59+12:00"
+          },
+          {
+            "id": "95f8920c-0927-5f9c-8776-2724fe72be11",
+            "category": "activity",
+            "type": "active_energy_burned",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "56",
+            "unit": "kcal",
+            "valueType": "integer",
+            "startDateTime": "2025-06-30T00:00:00+12:00",
+            "endDateTime": "2025-06-30T23:59:59+12:00"
+          },
+          {
+            "id": "d1ecdbbf-bcc9-506d-b755-74fc8c0a15d3",
+            "category": "activity",
+            "type": "active_hours",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "15",
+            "unit": "hour",
+            "valueType": "integer",
+            "startDateTime": "2025-06-30T00:00:00+12:00",
+            "endDateTime": "2025-06-30T23:59:59+12:00"
+          },
+          {
+            "id": "9fa2d998-98e8-5b87-aa6b-7d054e90a14f",
+            "category": "activity",
+            "type": "active_hours",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "6",
+            "unit": "hour",
+            "valueType": "integer",
+            "startDateTime": "2025-06-29T00:00:00+12:00",
+            "endDateTime": "2025-06-29T23:59:59+12:00"
+          },
+          {
+            "id": "540b721e-847d-5aae-9240-ef641d19f8d0",
+            "category": "activity",
+            "type": "activity_sedentary_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "810",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-06-29T00:00:00+12:00",
+            "endDateTime": "2025-06-29T23:59:59+12:00"
+          },
+          {
+            "id": "d5a9b23c-57f7-5ccc-b515-63b7362ecbd4",
+            "category": "activity",
+            "type": "steps",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "1230",
+            "unit": "count",
+            "valueType": "integer",
+            "startDateTime": "2025-06-29T00:00:00+12:00",
+            "endDateTime": "2025-06-29T23:59:59+12:00"
+          },
+          {
+            "id": "7dedcbb6-f109-512f-9760-b3c3927c6d02",
+            "category": "activity",
+            "type": "active_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "90",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-06-29T00:00:00+12:00",
+            "endDateTime": "2025-06-29T23:59:59+12:00"
+          },
+          {
+            "id": "79c18131-5093-56be-a14c-8b04b36ccf38",
+            "category": "activity",
+            "type": "activity_low_intensity_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "90",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-06-29T00:00:00+12:00",
+            "endDateTime": "2025-06-29T23:59:59+12:00"
+          },
+          {
+            "id": "223a554e-b92d-5f4a-8bd2-2a024979906f",
+            "category": "activity",
+            "type": "active_energy_burned",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "22",
+            "unit": "kcal",
+            "valueType": "integer",
+            "startDateTime": "2025-06-29T00:00:00+12:00",
+            "endDateTime": "2025-06-29T23:59:59+12:00"
+          },
+          {
+            "id": "2fd41ce2-0a6e-58d7-968a-538bd551af0d",
+            "category": "activity",
+            "type": "active_energy_burned",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "23",
+            "unit": "kcal",
+            "valueType": "integer",
+            "startDateTime": "2025-06-28T00:00:00+12:00",
+            "endDateTime": "2025-06-28T23:59:59+12:00"
+          },
+          {
+            "id": "45e3013f-cc46-5080-90f8-8932e1193356",
+            "category": "activity",
+            "type": "activity_sedentary_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "750",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-06-28T00:00:00+12:00",
+            "endDateTime": "2025-06-28T23:59:59+12:00"
+          },
+          {
+            "id": "bd5756b7-ae0e-5ee7-b09d-fe06af60579d",
+            "category": "activity",
+            "type": "steps",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "1281",
+            "unit": "count",
+            "valueType": "integer",
+            "startDateTime": "2025-06-28T00:00:00+12:00",
+            "endDateTime": "2025-06-28T23:59:59+12:00"
+          },
+          {
+            "id": "1c76328e-e863-5413-85c5-51f7b007678d",
+            "category": "activity",
+            "type": "active_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "90",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-06-28T00:00:00+12:00",
+            "endDateTime": "2025-06-28T23:59:59+12:00"
+          },
+          {
+            "id": "acdc98ed-db61-56b9-91ee-9e6e80d38157",
+            "category": "activity",
+            "type": "activity_low_intensity_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "90",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-06-28T00:00:00+12:00",
+            "endDateTime": "2025-06-28T23:59:59+12:00"
+          },
+          {
+            "id": "b92aa311-334f-550e-aee3-11e6b58e456d",
+            "category": "activity",
+            "type": "active_hours",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "6",
+            "unit": "hour",
+            "valueType": "integer",
+            "startDateTime": "2025-06-28T00:00:00+12:00",
+            "endDateTime": "2025-06-28T23:59:59+12:00"
+          },
+          {
+            "id": "b1780fac-e7db-5a7f-9474-d4996831a2ce",
+            "category": "activity",
+            "type": "activity_low_intensity_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "210",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-06-27T00:00:00+12:00",
+            "endDateTime": "2025-06-27T23:59:59+12:00"
+          },
+          {
+            "id": "da4b7930-548f-5fbb-9ea1-4967fe099eb8",
+            "category": "activity",
+            "type": "activity_sedentary_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "1230",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-06-27T00:00:00+12:00",
+            "endDateTime": "2025-06-27T23:59:59+12:00"
+          },
+          {
+            "id": "9fbc2a26-5335-513a-bee1-292a4a2ed913",
+            "category": "activity",
+            "type": "steps",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "2578",
+            "unit": "count",
+            "valueType": "integer",
+            "startDateTime": "2025-06-27T00:00:00+12:00",
+            "endDateTime": "2025-06-27T23:59:59+12:00"
+          },
+          {
+            "id": "44e5992e-1281-5f6c-9c6f-e432f58fc055",
+            "category": "activity",
+            "type": "active_hours",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "14",
+            "unit": "hour",
+            "valueType": "integer",
+            "startDateTime": "2025-06-27T00:00:00+12:00",
+            "endDateTime": "2025-06-27T23:59:59+12:00"
+          },
+          {
+            "id": "7705b2f7-2691-57fe-816a-727b8a338d2d",
+            "category": "activity",
+            "type": "active_duration",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "210",
+            "unit": "minute",
+            "valueType": "integer",
+            "startDateTime": "2025-06-27T00:00:00+12:00",
+            "endDateTime": "2025-06-27T23:59:59+12:00"
+          },
+          {
+            "id": "04e3adc9-3c3b-53b1-b6c6-9c004397cbe0",
+            "category": "activity",
+            "type": "active_energy_burned",
+            "periodicity": "daily",
+            "aggregation": "total",
+            "value": "45",
+            "unit": "kcal",
+            "valueType": "integer",
+            "startDateTime": "2025-06-27T00:00:00+12:00",
+            "endDateTime": "2025-06-27T23:59:59+12:00"
+          }
+        ],
+        "timestamp": "2025-07-11T17:42:42.895Z"
+      }
+    ],
+    "failed": [
+      {
+        "success": true,
+        "url": "/api/v1/profile/biomarker/SampleProfile-f106b5e0-4103-41d0-af6e-384f125dbf28?startDateTime=2025-06-01&endDateTime=2025-07-11&categories=body",
+        "status": 200,
+        "dataCount": 0,
+        "data": [],
+        "timestamp": "2025-07-11T17:42:43.199Z"
+      },
+      {
+        "success": true,
+        "url": "/api/v1/profile/biomarker/SampleProfile-f106b5e0-4103-41d0-af6e-384f125dbf28?startDateTime=2025-06-01&endDateTime=2025-07-11&categories=device",
+        "status": 200,
+        "dataCount": 0,
+        "data": [],
+        "timestamp": "2025-07-11T17:42:43.475Z"
+      },
+      {
+        "success": true,
+        "url": "/api/v1/profile/biomarker/SampleProfile-f106b5e0-4103-41d0-af6e-384f125dbf28?startDateTime=2025-06-01&endDateTime=2025-07-11&categories=heart",
+        "status": 200,
+        "dataCount": 0,
+        "data": [],
+        "timestamp": "2025-07-11T17:42:43.759Z"
+      },
+      {
+        "success": true,
+        "url": "/api/v1/profile/biomarker/SampleProfile-f106b5e0-4103-41d0-af6e-384f125dbf28?startDateTime=2025-06-01&endDateTime=2025-07-11&categories=mental",
+        "status": 200,
+        "dataCount": 0,
+        "data": [],
+        "timestamp": "2025-07-11T17:42:44.075Z"
+      },
+      {
+        "success": true,
+        "url": "/api/v1/profile/biomarker/SampleProfile-f106b5e0-4103-41d0-af6e-384f125dbf28?startDateTime=2025-06-01&endDateTime=2025-07-11&categories=nutrition",
+        "status": 200,
+        "dataCount": 0,
+        "data": [],
+        "timestamp": "2025-07-11T17:42:44.328Z"
+      },
+      {
+        "success": true,
+        "url": "/api/v1/profile/biomarker/SampleProfile-f106b5e0-4103-41d0-af6e-384f125dbf28?startDateTime=2025-06-01&endDateTime=2025-07-11&categories=environment",
+        "status": 200,
+        "dataCount": 0,
+        "data": [],
+        "timestamp": "2025-07-11T17:42:44.595Z"
+      }
+    ],
+    "allEndpointWorks": false
+  },
+  "archetypes": {
+    "available": {
+      "bed_schedule": {
+        "available": true,
+        "data": [
+          {
+            "id": "780605e8-db2d-5220-ba66-000bbc755144",
+            "name": "bed_schedule",
+            "value": "early_sleeper",
+            "dataType": "ordinal",
+            "periodicity": "weekly",
+            "startDateTime": "2025-06-30T00:00:00+12:00",
+            "endDateTime": "2025-07-06T00:00:00+12:00",
+            "ordinality": 1,
+            "version": 1
+          }
+        ],
+        "count": 1
+      },
+      "activity_pattern": {
+        "available": true,
+        "data": [],
+        "count": 0
+      },
+      "sleep_pattern": {
+        "available": true,
+        "data": [
+          {
+            "id": "817e807f-323f-537f-9782-6a7cc37b19af",
+            "name": "sleep_pattern",
+            "value": "consistent_early_sleeper",
+            "dataType": "categorical",
+            "periodicity": "weekly",
+            "startDateTime": "2025-06-30T00:00:00+12:00",
+            "endDateTime": "2025-07-06T00:00:00+12:00",
+            "ordinality": 0,
+            "version": 1
+          }
+        ],
+        "count": 1
+      },
+      "wellness_pattern": {
+        "available": true,
+        "data": [],
+        "count": 0
+      },
+      "mood_pattern": {
+        "available": true,
+        "data": [],
+        "count": 0
+      },
+      "energy_pattern": {
+        "available": true,
+        "data": [],
+        "count": 0
+      },
+      "exercise_pattern": {
+        "available": true,
+        "data": [],
+        "count": 0
+      },
+      "nutrition_pattern": {
+        "available": true,
+        "data": [],
+        "count": 0
+      },
+      "stress_pattern": {
+        "available": true,
+        "data": [],
+        "count": 0
+      },
+      "social_pattern": {
+        "available": true,
+        "data": [],
+        "count": 0
+      },
+      "work_pattern": {
+        "available": true,
+        "data": [],
+        "count": 0
+      },
+      "travel_pattern": {
+        "available": true,
+        "data": [],
+        "count": 0
+      },
+      "seasonal_pattern": {
+        "available": true,
+        "data": [],
+        "count": 0
+      },
+      "weekend_pattern": {
+        "available": true,
+        "data": [],
+        "count": 0
+      },
+      "recovery_pattern": {
+        "available": true,
+        "data": [],
+        "count": 0
+      }
+    },
+    "successful": [
+      {
+        "success": true,
+        "url": "/api/v1/profile/archetypes/SampleProfile-f106b5e0-4103-41d0-af6e-384f125dbf28?name=bed_schedule&periodicity=weekly&startDateTime=2025-06-01&endDateTime=2025-07-11",
+        "status": 200,
+        "dataCount": 1,
+        "data": [
+          {
+            "id": "780605e8-db2d-5220-ba66-000bbc755144",
+            "name": "bed_schedule",
+            "value": "early_sleeper",
+            "dataType": "ordinal",
+            "periodicity": "weekly",
+            "startDateTime": "2025-06-30T00:00:00+12:00",
+            "endDateTime": "2025-07-06T00:00:00+12:00",
+            "ordinality": 1,
+            "version": 1
+          }
+        ],
+        "timestamp": "2025-07-11T17:42:46.052Z"
+      },
+      {
+        "success": true,
+        "url": "/api/v1/profile/archetypes/SampleProfile-f106b5e0-4103-41d0-af6e-384f125dbf28?name=activity_pattern&periodicity=weekly&startDateTime=2025-06-01&endDateTime=2025-07-11",
+        "status": 200,
+        "dataCount": 0,
+        "data": [],
+        "timestamp": "2025-07-11T17:42:46.303Z"
+      },
+      {
+        "success": true,
+        "url": "/api/v1/profile/archetypes/SampleProfile-f106b5e0-4103-41d0-af6e-384f125dbf28?name=sleep_pattern&periodicity=weekly&startDateTime=2025-06-01&endDateTime=2025-07-11",
+        "status": 200,
+        "dataCount": 1,
+        "data": [
+          {
+            "id": "817e807f-323f-537f-9782-6a7cc37b19af",
+            "name": "sleep_pattern",
+            "value": "consistent_early_sleeper",
+            "dataType": "categorical",
+            "periodicity": "weekly",
+            "startDateTime": "2025-06-30T00:00:00+12:00",
+            "endDateTime": "2025-07-06T00:00:00+12:00",
+            "ordinality": 0,
+            "version": 1
+          }
+        ],
+        "timestamp": "2025-07-11T17:42:46.569Z"
+      },
+      {
+        "success": true,
+        "url": "/api/v1/profile/archetypes/SampleProfile-f106b5e0-4103-41d0-af6e-384f125dbf28?name=wellness_pattern&periodicity=weekly&startDateTime=2025-06-01&endDateTime=2025-07-11",
+        "status": 200,
+        "dataCount": 0,
+        "data": [],
+        "timestamp": "2025-07-11T17:42:46.933Z"
+      },
+      {
+        "success": true,
+        "url": "/api/v1/profile/archetypes/SampleProfile-f106b5e0-4103-41d0-af6e-384f125dbf28?name=mood_pattern&periodicity=weekly&startDateTime=2025-06-01&endDateTime=2025-07-11",
+        "status": 200,
+        "dataCount": 0,
+        "data": [],
+        "timestamp": "2025-07-11T17:42:47.183Z"
+      },
+      {
+        "success": true,
+        "url": "/api/v1/profile/archetypes/SampleProfile-f106b5e0-4103-41d0-af6e-384f125dbf28?name=energy_pattern&periodicity=weekly&startDateTime=2025-06-01&endDateTime=2025-07-11",
+        "status": 200,
+        "dataCount": 0,
+        "data": [],
+        "timestamp": "2025-07-11T17:42:47.427Z"
+      },
+      {
+        "success": true,
+        "url": "/api/v1/profile/archetypes/SampleProfile-f106b5e0-4103-41d0-af6e-384f125dbf28?name=exercise_pattern&periodicity=weekly&startDateTime=2025-06-01&endDateTime=2025-07-11",
+        "status": 200,
+        "dataCount": 0,
+        "data": [],
+        "timestamp": "2025-07-11T17:42:47.674Z"
+      },
+      {
+        "success": true,
+        "url": "/api/v1/profile/archetypes/SampleProfile-f106b5e0-4103-41d0-af6e-384f125dbf28?name=nutrition_pattern&periodicity=weekly&startDateTime=2025-06-01&endDateTime=2025-07-11",
+        "status": 200,
+        "dataCount": 0,
+        "data": [],
+        "timestamp": "2025-07-11T17:42:47.926Z"
+      },
+      {
+        "success": true,
+        "url": "/api/v1/profile/archetypes/SampleProfile-f106b5e0-4103-41d0-af6e-384f125dbf28?name=stress_pattern&periodicity=weekly&startDateTime=2025-06-01&endDateTime=2025-07-11",
+        "status": 200,
+        "dataCount": 0,
+        "data": [],
+        "timestamp": "2025-07-11T17:42:48.172Z"
+      },
+      {
+        "success": true,
+        "url": "/api/v1/profile/archetypes/SampleProfile-f106b5e0-4103-41d0-af6e-384f125dbf28?name=social_pattern&periodicity=weekly&startDateTime=2025-06-01&endDateTime=2025-07-11",
+        "status": 200,
+        "dataCount": 0,
+        "data": [],
+        "timestamp": "2025-07-11T17:42:48.419Z"
+      },
+      {
+        "success": true,
+        "url": "/api/v1/profile/archetypes/SampleProfile-f106b5e0-4103-41d0-af6e-384f125dbf28?name=work_pattern&periodicity=weekly&startDateTime=2025-06-01&endDateTime=2025-07-11",
+        "status": 200,
+        "dataCount": 0,
+        "data": [],
+        "timestamp": "2025-07-11T17:42:48.691Z"
+      },
+      {
+        "success": true,
+        "url": "/api/v1/profile/archetypes/SampleProfile-f106b5e0-4103-41d0-af6e-384f125dbf28?name=travel_pattern&periodicity=weekly&startDateTime=2025-06-01&endDateTime=2025-07-11",
+        "status": 200,
+        "dataCount": 0,
+        "data": [],
+        "timestamp": "2025-07-11T17:42:48.937Z"
+      },
+      {
+        "success": true,
+        "url": "/api/v1/profile/archetypes/SampleProfile-f106b5e0-4103-41d0-af6e-384f125dbf28?name=seasonal_pattern&periodicity=weekly&startDateTime=2025-06-01&endDateTime=2025-07-11",
+        "status": 200,
+        "dataCount": 0,
+        "data": [],
+        "timestamp": "2025-07-11T17:42:49.184Z"
+      },
+      {
+        "success": true,
+        "url": "/api/v1/profile/archetypes/SampleProfile-f106b5e0-4103-41d0-af6e-384f125dbf28?name=weekend_pattern&periodicity=weekly&startDateTime=2025-06-01&endDateTime=2025-07-11",
+        "status": 200,
+        "dataCount": 0,
+        "data": [],
+        "timestamp": "2025-07-11T17:42:49.428Z"
+      },
+      {
+        "success": true,
+        "url": "/api/v1/profile/archetypes/SampleProfile-f106b5e0-4103-41d0-af6e-384f125dbf28?name=recovery_pattern&periodicity=weekly&startDateTime=2025-06-01&endDateTime=2025-07-11",
+        "status": 200,
+        "dataCount": 0,
+        "data": [],
+        "timestamp": "2025-07-11T17:42:49.681Z"
+      }
+    ],
+    "failed": [],
+    "generalEndpoint": {
+      "available": true,
+      "data": [
+        {
+          "id": "6f2ea1e9-4549-52fd-9dff-2de423782f4b",
+          "name": "overall_wellness",
+          "value": "good_wellness",
+          "dataType": "ordinal",
+          "periodicity": "weekly",
+          "startDateTime": "2025-06-30T00:00:00+12:00",
+          "endDateTime": "2025-07-06T00:00:00+12:00",
+          "ordinality": 2,
+          "version": 1
+        },
+        {
+          "id": "1920343b-9c5e-5822-b79c-e0ff9040bd62",
+          "name": "activity_level",
+          "value": "lightly_active",
+          "dataType": "ordinal",
+          "periodicity": "weekly",
+          "startDateTime": "2025-06-30T00:00:00+12:00",
+          "endDateTime": "2025-07-06T00:00:00+12:00",
+          "ordinality": 1,
+          "version": 1
+        },
+        {
+          "id": "4e3b4c4d-7e81-572a-b37d-c08cae3dd87f",
+          "name": "mental_wellness",
+          "value": "good_mental_wellness",
+          "dataType": "ordinal",
+          "periodicity": "weekly",
+          "startDateTime": "2025-06-30T00:00:00+12:00",
+          "endDateTime": "2025-07-06T00:00:00+12:00",
+          "ordinality": 2,
+          "version": 1
+        },
+        {
+          "id": "d2aa3724-3cb7-5a30-8635-4ae9948f9daa",
+          "name": "sleep_duration",
+          "value": "average_sleeper",
+          "dataType": "ordinal",
+          "periodicity": "weekly",
+          "startDateTime": "2025-06-30T00:00:00+12:00",
+          "endDateTime": "2025-07-06T00:00:00+12:00",
+          "ordinality": 2,
+          "version": 1
+        },
+        {
+          "id": "11a8db25-b7b7-5e86-9fb7-f6a6d08cf6ab",
+          "name": "sleep_regularity",
+          "value": "highly_regular_sleeper",
+          "dataType": "ordinal",
+          "periodicity": "weekly",
+          "startDateTime": "2025-06-30T00:00:00+12:00",
+          "endDateTime": "2025-07-06T00:00:00+12:00",
+          "ordinality": 3,
+          "version": 1
+        },
+        {
+          "id": "780605e8-db2d-5220-ba66-000bbc755144",
+          "name": "bed_schedule",
+          "value": "early_sleeper",
+          "dataType": "ordinal",
+          "periodicity": "weekly",
+          "startDateTime": "2025-06-30T00:00:00+12:00",
+          "endDateTime": "2025-07-06T00:00:00+12:00",
+          "ordinality": 1,
+          "version": 1
+        },
+        {
+          "id": "7669eaab-eb57-5f23-ad7f-3b611341c53a",
+          "name": "wake_schedule",
+          "value": "early_riser",
+          "dataType": "ordinal",
+          "periodicity": "weekly",
+          "startDateTime": "2025-06-30T00:00:00+12:00",
+          "endDateTime": "2025-07-06T00:00:00+12:00",
+          "ordinality": 1,
+          "version": 1
+        },
+        {
+          "id": "817e807f-323f-537f-9782-6a7cc37b19af",
+          "name": "sleep_pattern",
+          "value": "consistent_early_sleeper",
+          "dataType": "categorical",
+          "periodicity": "weekly",
+          "startDateTime": "2025-06-30T00:00:00+12:00",
+          "endDateTime": "2025-07-06T00:00:00+12:00",
+          "ordinality": 0,
+          "version": 1
+        },
+        {
+          "id": "312c368b-7020-51b9-8b1a-1cff25ac33b5",
+          "name": "sleep_quality",
+          "value": "optimal_sleep_quality",
+          "dataType": "ordinal",
+          "periodicity": "weekly",
+          "startDateTime": "2025-06-30T00:00:00+12:00",
+          "endDateTime": "2025-07-06T00:00:00+12:00",
+          "ordinality": 3,
+          "version": 1
+        },
+        {
+          "id": "c1ee6749-a8c5-5aed-8086-375009db1d11",
+          "name": "activity_level",
+          "value": "lightly_active",
+          "dataType": "ordinal",
+          "periodicity": "weekly",
+          "startDateTime": "2025-06-23T00:00:00+12:00",
+          "endDateTime": "2025-06-29T00:00:00+12:00",
+          "ordinality": 1,
+          "version": 1
+        }
+      ],
+      "count": 10
+    }
+  },
+  "insights": {
+    "available": false,
+    "endpoints": [],
+    "data": null
+  },
+  "scores": {
+    "available": true,
+    "types": [
+      "/api/v1/profile/score/SampleProfile-f106b5e0-4103-41d0-af6e-384f125dbf28?types=sleep",
+      "/api/v1/profile/score/SampleProfile-f106b5e0-4103-41d0-af6e-384f125dbf28?types=activity",
+      "/api/v1/profile/score/SampleProfile-f106b5e0-4103-41d0-af6e-384f125dbf28?types=wellness",
+      "/api/v1/profile/score/SampleProfile-f106b5e0-4103-41d0-af6e-384f125dbf28?types=readiness"
+    ],
+    "data": [
+      {
+        "id": "310c9b9e-12fc-5433-99f9-ef1c263c8181",
+        "type": "sleep",
+        "state": "high",
+        "score": 0.96,
+        "factors": [
+          {
+            "id": "ca63e511-31a0-5203-a507-47a450b748c3",
+            "name": "sleep_duration",
+            "value": 480,
+            "goal": 480,
+            "score": 0.9900000095367432,
+            "state": "high",
+            "unit": "minute"
+          },
+          {
+            "id": "ab080fd1-afcd-55d5-b715-ec2ceb8ef7a4",
+            "name": "sleep_debt",
+            "value": 0.43799999356269836,
+            "goal": 0,
+            "score": 0.9700000286102295,
+            "state": "high",
+            "unit": "hour"
+          },
+          {
+            "id": "b47fd0f6-2945-5cb2-b5af-2a24e77bc988",
+            "name": "sleep_regularity",
+            "value": 0.9789999723434448,
+            "goal": 1,
+            "score": 0.9800000190734863,
+            "state": "high",
+            "unit": "index"
+          },
+          {
+            "id": "ea520205-da35-57e3-a930-719aa955b603",
+            "name": "circadian_alignment",
+            "value": 60,
+            "goal": 30,
+            "score": 0.8100000023841858,
+            "state": "high",
+            "unit": "minute"
+          }
+        ],
+        "dataSources": [
+          "sleep"
+        ],
+        "scoreDateTime": "2025-07-12T00:00:00+12:00",
+        "createdAtUtc": "2025-07-11T17:02:26+00:00",
+        "version": 1
+      },
+      {
+        "id": "43079eda-1aa4-5201-be6f-db4c3b81cd23",
+        "type": "sleep",
+        "state": "high",
+        "score": 0.96,
+        "factors": [
+          {
+            "id": "17dfcf7f-4ac0-5e2e-944a-8913ea9ea537",
+            "name": "sleep_duration",
+            "value": 480,
+            "goal": 480,
+            "score": 0.9900000095367432,
+            "state": "high",
+            "unit": "minute"
+          },
+          {
+            "id": "14a8f7a2-5b11-539b-9a65-3b2d6ca2b05d",
+            "name": "sleep_debt",
+            "value": 0.43799999356269836,
+            "goal": 0,
+            "score": 0.9700000286102295,
+            "state": "high",
+            "unit": "hour"
+          },
+          {
+            "id": "18744d4d-93e6-5999-9748-bd1cc59fca2e",
+            "name": "sleep_regularity",
+            "value": 0.972000002861023,
+            "goal": 1,
+            "score": 0.9700000286102295,
+            "state": "high",
+            "unit": "index"
+          },
+          {
+            "id": "05927085-3ee3-5b2a-b445-126ca3b2a38e",
+            "name": "circadian_alignment",
+            "value": 60,
+            "goal": 30,
+            "score": 0.8100000023841858,
+            "state": "high",
+            "unit": "minute"
+          }
+        ],
+        "dataSources": [
+          "sleep"
+        ],
+        "scoreDateTime": "2025-07-11T00:00:00+12:00",
+        "createdAtUtc": "2025-07-10T20:36:06+00:00",
+        "version": 1
+      },
+      {
+        "id": "aa2f0e9e-da1f-5a1e-a3bc-9aad152845ba",
+        "type": "sleep",
+        "state": "high",
+        "score": 0.95,
+        "factors": [
+          {
+            "id": "cd64db9d-2b18-518e-b8dd-43624629534a",
+            "name": "sleep_duration",
+            "value": 480,
+            "goal": 480,
+            "score": 0.9900000095367432,
+            "state": "high",
+            "unit": "minute"
+          },
+          {
+            "id": "c9127d59-0c82-550a-9bf7-e967c3370205",
+            "name": "sleep_debt",
+            "value": 0.43799999356269836,
+            "goal": 0,
+            "score": 0.9700000286102295,
+            "state": "high",
+            "unit": "hour"
+          },
+          {
+            "id": "363c290e-a2cf-5d31-965f-58db0992d857",
+            "name": "sleep_regularity",
+            "value": 0.9580000042915344,
+            "goal": 1,
+            "score": 0.9599999785423279,
+            "state": "high",
+            "unit": "index"
+          },
+          {
+            "id": "f41a89a7-3801-5b79-9932-ac4139c47195",
+            "name": "circadian_alignment",
+            "value": 60,
+            "goal": 30,
+            "score": 0.8100000023841858,
+            "state": "high",
+            "unit": "minute"
+          }
+        ],
+        "dataSources": [
+          "sleep"
+        ],
+        "scoreDateTime": "2025-07-10T00:00:00+12:00",
+        "createdAtUtc": "2025-07-10T20:36:06+00:00",
+        "version": 1
+      },
+      {
+        "id": "962a83d8-7437-52c8-b886-d1a4f986aba9",
+        "type": "sleep",
+        "state": "high",
+        "score": 0.95,
+        "factors": [
+          {
+            "id": "26980917-8707-5d93-8ce5-20911567612a",
+            "name": "sleep_duration",
+            "value": 480,
+            "goal": 480,
+            "score": 0.9900000095367432,
+            "state": "high",
+            "unit": "minute"
+          },
+          {
+            "id": "a5f1db50-07cc-5adc-a4ea-f0932c094831",
+            "name": "sleep_debt",
+            "value": 0.43799999356269836,
+            "goal": 0,
+            "score": 0.9700000286102295,
+            "state": "high",
+            "unit": "hour"
+          },
+          {
+            "id": "67e35aff-3ae5-5042-a81d-141df02f197d",
+            "name": "sleep_regularity",
+            "value": 0.9580000042915344,
+            "goal": 1,
+            "score": 0.9599999785423279,
+            "state": "high",
+            "unit": "index"
+          },
+          {
+            "id": "8ff436cb-8f57-58ea-96fc-1a8591a9d1eb",
+            "name": "circadian_alignment",
+            "value": 60,
+            "goal": 30,
+            "score": 0.8100000023841858,
+            "state": "high",
+            "unit": "minute"
+          }
+        ],
+        "dataSources": [
+          "sleep"
+        ],
+        "scoreDateTime": "2025-07-09T00:00:00+12:00",
+        "createdAtUtc": "2025-07-10T20:36:06+00:00",
+        "version": 1
+      },
+      {
+        "id": "7a1c4bf2-08d1-56b3-a350-7fb2e87d5002",
+        "type": "sleep",
+        "state": "high",
+        "score": 0.95,
+        "factors": [
+          {
+            "id": "5caf0303-72aa-5a81-a071-f964e46d5531",
+            "name": "sleep_duration",
+            "value": 480,
+            "goal": 480,
+            "score": 0.9900000095367432,
+            "state": "high",
+            "unit": "minute"
+          },
+          {
+            "id": "dc7918b2-9e05-566e-a6ac-d486e51328be",
+            "name": "sleep_debt",
+            "value": 0.43799999356269836,
+            "goal": 0,
+            "score": 0.9700000286102295,
+            "state": "high",
+            "unit": "hour"
+          },
+          {
+            "id": "9ecc05b4-92fa-54a9-9e2b-ff651e492fc2",
+            "name": "sleep_regularity",
+            "value": 0.9580000042915344,
+            "goal": 1,
+            "score": 0.9599999785423279,
+            "state": "high",
+            "unit": "index"
+          },
+          {
+            "id": "2c3d36fd-73c5-5a4b-b30e-6f65b9067958",
+            "name": "circadian_alignment",
+            "value": 60,
+            "goal": 30,
+            "score": 0.8100000023841858,
+            "state": "high",
+            "unit": "minute"
+          }
+        ],
+        "dataSources": [
+          "sleep"
+        ],
+        "scoreDateTime": "2025-07-08T00:00:00+12:00",
+        "createdAtUtc": "2025-07-10T20:36:06+00:00",
+        "version": 1
+      },
+      {
+        "id": "cb0967d0-4b4a-5a81-8890-c29e3d71bcb8",
+        "type": "sleep",
+        "state": "high",
+        "score": 0.91,
+        "factors": [
+          {
+            "id": "8d4b9759-4645-59ff-a563-23f6a2cb58ee",
+            "name": "sleep_duration",
+            "value": 420,
+            "goal": 480,
+            "score": 0.8500000238418579,
+            "state": "high",
+            "unit": "minute"
+          },
+          {
+            "id": "3b25f469-c5d7-526b-b18c-8a77f99ef8bb",
+            "name": "sleep_debt",
+            "value": 0.875,
+            "goal": 0,
+            "score": 0.949999988079071,
+            "state": "high",
+            "unit": "hour"
+          },
+          {
+            "id": "2d3aa578-58d2-556b-a695-f075d7e1dc26",
+            "name": "sleep_regularity",
+            "value": 0.9649999737739563,
+            "goal": 1,
+            "score": 0.9700000286102295,
+            "state": "high",
+            "unit": "index"
+          },
+          {
+            "id": "2cfb0030-7c1b-5b26-b77a-ded13a914ce6",
+            "name": "circadian_alignment",
+            "value": 30,
+            "goal": 30,
+            "score": 0.8999999761581421,
+            "state": "high",
+            "unit": "minute"
+          }
+        ],
+        "dataSources": [
+          "sleep"
+        ],
+        "scoreDateTime": "2025-07-07T00:00:00+12:00",
+        "createdAtUtc": "2025-07-10T20:36:06+00:00",
+        "version": 1
+      },
+      {
+        "id": "3d0a7765-4f7f-597c-a4ce-8b9cc9a61a9f",
+        "type": "sleep",
+        "state": "high",
+        "score": 0.9,
+        "factors": [
+          {
+            "id": "da85fa08-8a72-5cc8-beb8-ead815683caa",
+            "name": "sleep_duration",
+            "value": 540,
+            "goal": 480,
+            "score": 0.8199999928474426,
+            "state": "high",
+            "unit": "minute"
+          },
+          {
+            "id": "e8e061cd-1cbd-5392-8454-92684e1d105b",
+            "name": "sleep_debt",
+            "value": 0.43799999356269836,
+            "goal": 0,
+            "score": 0.9700000286102295,
+            "state": "high",
+            "unit": "hour"
+          },
+          {
+            "id": "e5eb660b-c0e8-595a-9044-dfdaec22105b",
+            "name": "sleep_regularity",
+            "value": 0.972000002861023,
+            "goal": 1,
+            "score": 0.9700000286102295,
+            "state": "high",
+            "unit": "index"
+          },
+          {
+            "id": "7352101b-df12-5d5c-bd5a-42a3821c4dfc",
+            "name": "circadian_alignment",
+            "value": 30,
+            "goal": 30,
+            "score": 0.8999999761581421,
+            "state": "high",
+            "unit": "minute"
+          }
+        ],
+        "dataSources": [
+          "sleep"
+        ],
+        "scoreDateTime": "2025-07-06T00:00:00+12:00",
+        "createdAtUtc": "2025-07-10T20:36:06+00:00",
+        "version": 1
+      },
+      {
+        "id": "05cdb2d6-f12f-5fc4-b46e-dd36b62f79b4",
+        "type": "sleep",
+        "state": "high",
+        "score": 0.83,
+        "factors": [
+          {
+            "id": "3660b80c-fc2c-5bbe-84df-da285bc177ee",
+            "name": "sleep_duration",
+            "value": 600,
+            "goal": 480,
+            "score": 0.6700000166893005,
+            "state": "medium",
+            "unit": "minute"
+          },
+          {
+            "id": "cf7ea979-dea2-566b-8fd2-3d6c741be675",
+            "name": "sleep_debt",
+            "value": 0.43799999356269836,
+            "goal": 0,
+            "score": 0.9700000286102295,
+            "state": "high",
+            "unit": "hour"
+          },
+          {
+            "id": "a40dd14f-a76e-50c1-ba8c-f3180c8ca532",
+            "name": "sleep_regularity",
+            "value": 0.9649999737739563,
+            "goal": 1,
+            "score": 0.9700000286102295,
+            "state": "high",
+            "unit": "index"
+          },
+          {
+            "id": "0862a489-9bf3-5b10-92d5-2e58eab63b86",
+            "name": "circadian_alignment",
+            "value": 60,
+            "goal": 30,
+            "score": 0.8100000023841858,
+            "state": "high",
+            "unit": "minute"
+          }
+        ],
+        "dataSources": [
+          "sleep"
+        ],
+        "scoreDateTime": "2025-07-05T00:00:00+12:00",
+        "createdAtUtc": "2025-07-10T20:36:06+00:00",
+        "version": 1
+      },
+      {
+        "id": "28770e8e-617a-5837-b33b-8317a829687d",
+        "type": "sleep",
+        "state": "high",
+        "score": 0.96,
+        "factors": [
+          {
+            "id": "882ace59-65c9-5d80-82be-ab620c2f86a7",
+            "name": "sleep_duration",
+            "value": 480,
+            "goal": 480,
+            "score": 0.9900000095367432,
+            "state": "high",
+            "unit": "minute"
+          },
+          {
+            "id": "dbbf8a6e-73fa-54b1-b96f-721d1c430b82",
+            "name": "sleep_debt",
+            "value": 0.43799999356269836,
+            "goal": 0,
+            "score": 0.9700000286102295,
+            "state": "high",
+            "unit": "hour"
+          },
+          {
+            "id": "fa81efa5-3892-54ee-be1c-626e29697638",
+            "name": "sleep_regularity",
+            "value": 0.972000002861023,
+            "goal": 1,
+            "score": 0.9700000286102295,
+            "state": "high",
+            "unit": "index"
+          },
+          {
+            "id": "78973879-d129-56fe-955c-ee196910d119",
+            "name": "circadian_alignment",
+            "value": 60,
+            "goal": 30,
+            "score": 0.8100000023841858,
+            "state": "high",
+            "unit": "minute"
+          }
+        ],
+        "dataSources": [
+          "sleep"
+        ],
+        "scoreDateTime": "2025-07-04T00:00:00+12:00",
+        "createdAtUtc": "2025-07-10T20:36:06+00:00",
+        "version": 1
+      },
+      {
+        "id": "c1e176f6-9ab9-59f0-9c49-e0caf8dfdfe2",
+        "type": "sleep",
+        "state": "high",
+        "score": 0.96,
+        "factors": [
+          {
+            "id": "93619d87-5296-505a-a210-8ed12e3412b9",
+            "name": "sleep_duration",
+            "value": 480,
+            "goal": 480,
+            "score": 0.9900000095367432,
+            "state": "high",
+            "unit": "minute"
+          },
+          {
+            "id": "d5ba38e4-8ff1-5fbb-8cc9-1b4cac539b8d",
+            "name": "sleep_debt",
+            "value": 0.44999998807907104,
+            "goal": 0,
+            "score": 0.9700000286102295,
+            "state": "high",
+            "unit": "hour"
+          },
+          {
+            "id": "42a34b15-6fd1-5e4f-946e-220e94bb8ae6",
+            "name": "sleep_regularity",
+            "value": 0.9670000076293945,
+            "goal": 1,
+            "score": 0.9700000286102295,
+            "state": "high",
+            "unit": "index"
+          },
+          {
+            "id": "75b0ca10-1793-51ca-bd9f-776591a12916",
+            "name": "circadian_alignment",
+            "value": 60,
+            "goal": 30,
+            "score": 0.8100000023841858,
+            "state": "high",
+            "unit": "minute"
+          }
+        ],
+        "dataSources": [
+          "sleep"
+        ],
+        "scoreDateTime": "2025-07-03T00:00:00+12:00",
+        "createdAtUtc": "2025-07-10T20:36:06+00:00",
+        "version": 1
+      },
+      {
+        "id": "fa660851-1564-52eb-b4f6-0c576cf9dee6",
+        "type": "sleep",
+        "state": "high",
+        "score": 0.95,
+        "factors": [
+          {
+            "id": "6329cfb0-c578-57c0-8f4d-9d0304e0480d",
+            "name": "sleep_duration",
+            "value": 480,
+            "goal": 480,
+            "score": 0.9900000095367432,
+            "state": "high",
+            "unit": "minute"
+          },
+          {
+            "id": "7baffcea-b6f3-5e1b-a6a9-dd73ed860153",
+            "name": "sleep_debt",
+            "value": 0.4690000116825104,
+            "goal": 0,
+            "score": 0.9700000286102295,
+            "state": "high",
+            "unit": "hour"
+          },
+          {
+            "id": "b5021c18-eac6-517d-b3ec-2eaaebe76c50",
+            "name": "sleep_regularity",
+            "value": 0.9580000042915344,
+            "goal": 1,
+            "score": 0.9599999785423279,
+            "state": "high",
+            "unit": "index"
+          },
+          {
+            "id": "7fbd682c-fde5-5848-ae80-01fe754b7ee5",
+            "name": "circadian_alignment",
+            "value": 60,
+            "goal": 30,
+            "score": 0.8100000023841858,
+            "state": "high",
+            "unit": "minute"
+          }
+        ],
+        "dataSources": [
+          "sleep"
+        ],
+        "scoreDateTime": "2025-07-02T00:00:00+12:00",
+        "createdAtUtc": "2025-07-10T20:36:06+00:00",
+        "version": 1
+      },
+      {
+        "id": "da926a7d-5928-55df-b61f-b518106ade7f",
+        "type": "sleep",
+        "state": "high",
+        "score": 0.95,
+        "factors": [
+          {
+            "id": "b52bb43f-f6b1-5fba-bac2-322123e81e56",
+            "name": "sleep_duration",
+            "value": 480,
+            "goal": 480,
+            "score": 0.9900000095367432,
+            "state": "high",
+            "unit": "minute"
+          },
+          {
+            "id": "09be83bb-3a76-5e16-997b-ea0bf8967d6d",
+            "name": "sleep_debt",
+            "value": 0.5,
+            "goal": 0,
+            "score": 0.9700000286102295,
+            "state": "high",
+            "unit": "hour"
+          },
+          {
+            "id": "be324dd1-856e-568d-921d-f8741199a12e",
+            "name": "sleep_regularity",
+            "value": 0.9440000057220459,
+            "goal": 1,
+            "score": 0.9399999976158142,
+            "state": "high",
+            "unit": "index"
+          },
+          {
+            "id": "5a6c52f6-e7e3-5172-bcd7-81a294fea05f",
+            "name": "circadian_alignment",
+            "value": 60,
+            "goal": 30,
+            "score": 0.8100000023841858,
+            "state": "high",
+            "unit": "minute"
+          }
+        ],
+        "dataSources": [
+          "sleep"
+        ],
+        "scoreDateTime": "2025-07-01T00:00:00+12:00",
+        "createdAtUtc": "2025-07-10T20:36:06+00:00",
+        "version": 1
+      },
+      {
+        "id": "1cf8c902-d343-55e5-99db-e9257d8ee1f9",
+        "type": "sleep",
+        "state": "high",
+        "score": 0.91,
+        "factors": [
+          {
+            "id": "e51776ce-1dd3-5204-bdca-0986445e986b",
+            "name": "sleep_duration",
+            "value": 420,
+            "goal": 480,
+            "score": 0.8500000238418579,
+            "state": "high",
+            "unit": "minute"
+          },
+          {
+            "id": "9091477b-a97a-5f29-ba2c-f0723e8b67b2",
+            "name": "sleep_debt",
+            "value": 0.375,
+            "goal": 0,
+            "score": 0.9800000190734863,
+            "state": "high",
+            "unit": "hour"
+          },
+          {
+            "id": "ccd0ac01-70ce-5f97-b152-017ac707558d",
+            "name": "sleep_regularity",
+            "value": 0.9380000233650208,
+            "goal": 1,
+            "score": 0.9399999976158142,
+            "state": "high",
+            "unit": "index"
+          },
+          {
+            "id": "0ba5423a-723e-5563-a348-dba0e928ace6",
+            "name": "circadian_alignment",
+            "value": 30,
+            "goal": 30,
+            "score": 0.8999999761581421,
+            "state": "high",
+            "unit": "minute"
+          }
+        ],
+        "dataSources": [
+          "sleep"
+        ],
+        "scoreDateTime": "2025-06-30T00:00:00+12:00",
+        "createdAtUtc": "2025-07-10T20:36:06+00:00",
+        "version": 1
+      }
+    ]
+  },
+  "summary": {
+    "biomarkers": {
+      "categoriesTested": 8,
+      "categoriesAvailable": 2,
+      "availableCategories": [
+        "sleep",
+        "activity"
+      ],
+      "uniqueTypes": 13,
+      "successfulCalls": 2
+    },
+    "archetypes": {
+      "namesTested": 15,
+      "available": 15,
+      "availableArchetypes": [
+        "bed_schedule",
+        "activity_pattern",
+        "sleep_pattern",
+        "wellness_pattern",
+        "mood_pattern",
+        "energy_pattern",
+        "exercise_pattern",
+        "nutrition_pattern",
+        "stress_pattern",
+        "social_pattern",
+        "work_pattern",
+        "travel_pattern",
+        "seasonal_pattern",
+        "weekend_pattern",
+        "recovery_pattern"
+      ],
+      "successfulCalls": 15
+    },
+    "insights": {
+      "available": false,
+      "workingEndpoints": 0
+    },
+    "scores": {
+      "available": true,
+      "workingEndpoints": 4
+    }
+  }
+}

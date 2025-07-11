@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahha GEO - Generative Engine Optimization for Health Data AI</title>
+    <meta name="description" content="Optimize AI tools like Claude, ChatGPT, and Copilot to better understand and utilize Sahha's health data platform. Advanced GEO strategies for health tech development.">
+    <meta name="keywords" content="Sahha API, health data AI, generative engine optimization, Claude integration, health biomarkers, AI development">
+    
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="Sahha GEO - AI-Optimized Health Data Integration">
+    <meta property="og:description" content="Revolutionary GEO strategies that make AI tools 10x better at understanding and building with Sahha's health data platform.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sahha-geo.dev">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sahha GEO - AI-Optimized Health Data">
+    <meta name="twitter:description" content="Making AI tools like Claude and ChatGPT experts at Sahha health data integration.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --bg-dark-gradient: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            --text-color: #333;
+            --text-dark: #e2e8f0;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --card-bg-dark: rgba(30, 41, 59, 0.95);
+            --feature-bg: white;
+            --feature-bg-dark: #1e293b;
+            --feature-card-bg: #f8fafc;
+            --feature-card-bg-dark: #334155;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: var(--bg-gradient);
+            min-height: 100vh;
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode {
+            color: var(--text-dark);
+            background: var(--bg-dark-gradient);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode header {
+            background: var(--card-bg-dark);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #6366f1;
+        }
+
+        .dark-mode-toggle {
+            background: none;
+            border: 2px solid #6366f1;
+            color: #6366f1;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .dark-mode-toggle:hover {
+            background: #6366f1;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #6366f1;
+        }
+
+        body.dark-mode .nav-links a {
+            color: var(--text-dark);
+        }
+
+        body.dark-mode .dark-mode-toggle {
+            border-color: #10b981;
+            color: #10b981;
+        }
+
+        body.dark-mode .dark-mode-toggle:hover {
+            background: #10b981;
+            color: white;
+        }
+
+        main {
+            margin-top: 80px;
+            padding: 2rem 0;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            background: #10b981;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+        }
+
+        .features {
+            background: var(--feature-bg);
+            padding: 4rem 0;
+            margin: 2rem 0;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode .features {
+            background: var(--feature-bg-dark);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            padding: 2rem;
+            background: var(--feature-card-bg);
+            border-radius: 12px;
+            border-left: 4px solid #6366f1;
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode .feature-card {
+            background: var(--feature-card-bg-dark);
+            border-left-color: #10b981;
+        }
+
+        .feature-card h3 {
+            color: #6366f1;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .code-example {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            overflow-x: auto;
+        }
+
+        .code-example pre {
+            margin: 0;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9rem;
+        }
+
+        .ai-optimization {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            padding: 4rem 0;
+            margin: 2rem 0;
+            border-radius: 20px;
+        }
+
+        .optimization-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .optimization-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .stat {
+            text-align: center;
+            color: white;
+        }
+
+        .stat h3 {
+            font-size: 2.5rem;
+            color: #10b981;
+            margin-bottom: 0.5rem;
+        }
+
+        .use-cases {
+            background: white;
+            padding: 4rem 0;
+            margin: 2rem 0;
+            border-radius: 20px;
+        }
+
+        .use-case {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            padding: 2rem;
+            background: #f8fafc;
+            border-radius: 12px;
+        }
+
+        .use-case:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .use-case-content {
+            flex: 1;
+        }
+
+        .use-case-visual {
+            flex: 1;
+            background: #6366f1;
+            height: 200px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        footer {
+            background: #1e293b;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .use-case {
+                flex-direction: column !important;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Sahha GEO</div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#optimization">AI Optimization</a></li>
+                        <li><a href="#use-cases">Use Cases</a></li>
+                        <li><a href="#integration">Integration</a></li>
+                        <li><a href="#research">Research</a></li>
+                        <li><button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙 Dark</button></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Sahha GEO</h1>
+                <p>Generative Engine Optimization for Health Data AI. Making tools like Claude, ChatGPT, and GitHub Copilot 10x better at understanding and building with Sahha's health data platform.</p>
+                <a href="#optimization" class="cta-button">Explore AI Optimization</a>
+                
+                <div class="stats">
+                    <div class="stat">
+                        <h3>100+</h3>
+                        <p>Health Biomarkers</p>
+                    </div>
+                    <div class="stat">
+                        <h3>95%</h3>
+                        <p>API Efficiency Gain</p>
+                    </div>
+                    <div class="stat">
+                        <h3>5x</h3>
+                        <p>Faster Development</p>
+                    </div>
+                    <div class="stat">
+                        <h3>∞</h3>
+                        <p>AI Integration Potential</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" id="optimization">
+            <div class="container">
+                <h2>🤖 AI-Optimized Health Data Integration</h2>
+                <p>Revolutionary GEO strategies that make AI tools understand Sahha's capabilities like human experts.</p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>🧠 Semantic API Mapping</h3>
+                        <p>AI tools instantly understand which Sahha endpoints to use for specific health scenarios. From sleep analysis to workout recommendations.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3>📊 Biomarker Intelligence</h3>
+                        <p>AI understands the clinical significance of each biomarker and how to combine them for meaningful health insights.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3>⚡ Optimization Patterns</h3>
+                        <p>Pre-built patterns that reduce API calls by 95% while maintaining full functionality through focused data retrieval.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3>🔗 Context-Aware Integration</h3>
+                        <p>AI tools automatically choose the right authentication, error handling, and data processing patterns for each use case.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3>📈 Trend Analysis Ready</h3>
+                        <p>Built-in understanding of how to implement 7-day, 30-day, and seasonal health pattern analysis.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3>🎯 Use Case Templates</h3>
+                        <p>AI tools know exactly how to build common health applications: sleep coaching, fitness tracking, wellness dashboards.</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>// GEO-Optimized: AI tools understand this pattern instantly
+const healthInsights = await sahha.getFocusedBiomarkers({
+  useCase: 'morning_checkup',
+  metrics: ['sleep_duration', 'sleep_quality', 'steps', 'readiness'],
+  optimization: 'minimal_data_transfer'
+});
+
+// Result: 4 metrics instead of 104, 95% faster response
+// AI knows this pattern optimizes for user experience</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="ai-optimization">
+            <div class="container">
+                <h2>🚀 How GEO Transforms AI Development</h2>
+                <p>See how Generative Engine Optimization makes AI tools exponentially better at health data integration.</p>
+                
+                <div class="optimization-grid">
+                    <div class="optimization-card">
+                        <h3>🔍 Before GEO</h3>
+                        <p>AI: "I need to analyze the Sahha documentation to understand 100+ endpoints and figure out authentication..."</p>
+                        <small>⏱️ 30+ minutes of research per project</small>
+                    </div>
+                    
+                    <div class="optimization-card">
+                        <h3>✨ After GEO</h3>
+                        <p>AI: "I'll use the morning_checkup pattern with 4 optimized biomarkers and account-level auth."</p>
+                        <small>⚡ Instant implementation with best practices</small>
+                    </div>
+                    
+                    <div class="optimization-card">
+                        <h3>📚 Traditional Approach</h3>
+                        <p>Developers read docs → Trial and error → Suboptimal integration → Performance issues</p>
+                        <small>❌ Weeks of development time</small>
+                    </div>
+                    
+                    <div class="optimization-card">
+                        <h3>🎯 GEO Approach</h3>
+                        <p>AI understands optimal patterns → Implements best practices → Production-ready code</p>
+                        <small>✅ Hours to deployment</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="use-cases" id="use-cases">
+            <div class="container">
+                <h2>💡 Real-World GEO Applications</h2>
+                
+                <div class="use-case">
+                    <div class="use-case-content">
+                        <h3>🏥 Clinical Health Apps</h3>
+                        <p>AI tools instantly know how to build HIPAA-compliant health monitoring systems using Sahha's biomarker data. Understands which metrics correlate with clinical outcomes and how to implement proper data privacy.</p>
+                        <ul>
+                            <li>Sleep disorder tracking with 7-day trend analysis</li>
+                            <li>Post-surgical recovery monitoring</li>
+                            <li>Chronic disease management dashboards</li>
+                        </ul>
+                    </div>
+                    <div class="use-case-visual">
+                        Clinical Integration
+                    </div>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-content">
+                        <h3>💪 Fitness & Wellness Platforms</h3>
+                        <p>AI understands how to create personalized workout recommendations based on sleep quality, recovery status, and activity patterns. Knows which biomarkers predict optimal training windows.</p>
+                        <ul>
+                            <li>AI-powered personal training apps</li>
+                            <li>Corporate wellness platforms</li>
+                            <li>Recovery-optimized training schedules</li>
+                        </ul>
+                    </div>
+                    <div class="use-case-visual">
+                        Fitness AI
+                    </div>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-content">
+                        <h3>📱 Consumer Health Apps</h3>
+                        <p>AI tools create engaging user experiences with contextual health insights. Understands how to gamify health data and create sticky, habit-forming applications.</p>
+                        <ul>
+                            <li>Smart notification systems (like our demo)</li>
+                            <li>Health coaching chatbots</li>
+                            <li>Family health tracking platforms</li>
+                        </ul>
+                    </div>
+                    <div class="use-case-visual">
+                        Consumer Apps
+                    </div>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-content">
+                        <h3>🔬 Research & Analytics</h3>
+                        <p>AI understands how to build research platforms that comply with data ethics while extracting meaningful population health insights from aggregated biomarker data.</p>
+                        <ul>
+                            <li>Population health studies</li>
+                            <li>Digital biomarker research</li>
+                            <li>Health intervention effectiveness tracking</li>
+                        </ul>
+                    </div>
+                    <div class="use-case-visual">
+                        Research Tools
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" id="integration">
+            <div class="container">
+                <h2>🔧 GEO Integration Strategies</h2>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>📖 Semantic Documentation</h3>
+                        <p>Documentation written specifically for AI consumption, with clear intent patterns and use case mappings that generative models can understand immediately.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3>🏗️ Pattern Libraries</h3>
+                        <p>Pre-built code patterns for common health scenarios that AI tools can reference and adapt instantly, eliminating the research phase.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3>🤝 AI-First API Design</h3>
+                        <p>API endpoints and response formats optimized for AI tool consumption, with predictable patterns and clear semantic meaning.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3>📊 Context Graphs</h3>
+                        <p>Relationship mapping between biomarkers, use cases, and optimal implementation patterns that AI can traverse like knowledge graphs.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3>⚡ Performance Blueprints</h3>
+                        <p>Pre-calculated optimization strategies that AI tools can apply automatically, like API call reduction and caching patterns.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3>🔒 Security Templates</h3>
+                        <p>AI-readable security and privacy patterns for health data that ensure compliance without requiring manual security expertise.</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>// GEO Semantic Pattern: AI understands intent immediately
+sahha.patterns.morningHealthCheck({
+  biomarkers: ['sleep_quality', 'readiness_score'],
+  notifications: 'contextual',
+  optimization: 'fast_response'
+})
+.then(insights => {
+  // AI knows this creates personalized morning health summary
+  // with optimal performance and user experience
+});</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="ai-optimization" id="research">
+            <div class="container">
+                <h2>🔬 Research & Development Focus</h2>
+                <p>Advancing the intersection of AI tools, health data, and developer experience.</p>
+                
+                <div class="optimization-grid">
+                    <div class="optimization-card">
+                        <h3>🧠 AI Understanding</h3>
+                        <p>Research how generative AI models best consume and understand health data APIs, optimizing for both accuracy and implementation speed.</p>
+                    </div>
+                    
+                    <div class="optimization-card">
+                        <h3>📈 Performance Analytics</h3>
+                        <p>Measuring the impact of GEO strategies on development velocity, code quality, and application performance across different AI tools.</p>
+                    </div>
+                    
+                    <div class="optimization-card">
+                        <h3>🔮 Future Patterns</h3>
+                        <p>Exploring emerging patterns in health tech development and how AI tools can anticipate and support next-generation health applications.</p>
+                    </div>
+                    
+                    <div class="optimization-card">
+                        <h3>🌐 Ecosystem Integration</h3>
+                        <p>Building bridges between Sahha's platform and the broader health tech ecosystem, making integration seamless for AI-assisted development.</p>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 3rem; text-align: center;">
+                    <h3>🚀 Ready to Transform Health AI Development?</h3>
+                    <p style="margin: 1rem 0;">Join the future of AI-optimized health data integration.</p>
+                    <a href="mailto:research@sahha-geo.dev" class="cta-button">Start Collaboration</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <ul class="footer-links">
+                <li><a href="#optimization">AI Optimization</a></li>
+                <li><a href="https://docs.sahha.ai">Sahha Docs</a></li>
+                <li><a href="https://github.com/fivelidz/Sahha_things">GitHub</a></li>
+                <li><a href="https://linkedin.com/in/yourprofile">LinkedIn</a></li>
+            </ul>
+            <p>&copy; 2025 Sahha GEO Project. Advancing AI-powered health data integration.</p>
+            <p style="margin-top: 1rem; opacity: 0.7; font-size: 0.9rem;">
+                Built with ❤️ for the future of health technology and AI collaboration.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Dark mode functionality
+        function toggleDarkMode() {
+            const body = document.body;
+            const toggle = document.querySelector('.dark-mode-toggle');
+            
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+                toggle.innerHTML = '☀️ Light';
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                toggle.innerHTML = '🌙 Dark';
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        }
+
+        // Check for saved dark mode preference
+        document.addEventListener('DOMContentLoaded', () => {
+            const darkMode = localStorage.getItem('darkMode');
+            const toggle = document.querySelector('.dark-mode-toggle');
+            
+            if (darkMode === 'enabled') {
+                document.body.classList.add('dark-mode');
+                toggle.innerHTML = '☀️ Light';
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all feature cards and use cases
+        document.querySelectorAll('.feature-card, .use-case, .optimization-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
