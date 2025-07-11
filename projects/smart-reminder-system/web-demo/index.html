@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Reminder System - Sahha AI Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧠 Smart Reminder System</h1>
+            <p class="subtitle">Context-aware health notifications powered by Sahha AI</p>
+            <div class="status-badge">
+                <span class="badge mvp">MVP Demo</span>
+                <span class="badge api">API Integration Ready</span>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="demo-card">
+                    <h2>🌅 Live Morning Checkup Demo</h2>
+                    <p>Experience how the Smart Reminder System analyzes your health data and provides personalized recommendations</p>
+                    <button id="runDemo" class="btn-primary">Run Morning Checkup</button>
+                </div>
+            </section>
+
+            <section class="health-dashboard" id="healthDashboard" style="display: none;">
+                <div class="data-source-indicator" id="dataSourceIndicator" style="text-align: center; margin-bottom: 20px;"></div>
+                <h3>📊 Your Health Summary</h3>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-icon">😴</div>
+                        <div class="metric-value" id="sleepScore">--</div>
+                        <div class="metric-label">Sleep Quality</div>
+                        <div class="metric-trend" id="sleepTrend"></div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">💪</div>
+                        <div class="metric-value" id="readinessScore">--</div>
+                        <div class="metric-label">Readiness</div>
+                        <div class="metric-trend" id="readinessTrend"></div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">🏃</div>
+                        <div class="metric-value" id="activityScore">--</div>
+                        <div class="metric-label">Activity Level</div>
+                        <div class="metric-trend" id="activityTrend"></div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">💧</div>
+                        <div class="metric-value" id="hydrationLevel">--</div>
+                        <div class="metric-label">Hydration Need</div>
+                        <div class="metric-trend" id="hydrationTrend"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="notifications" id="notifications" style="display: none;">
+                <h3>🔔 Smart Notifications</h3>
+                <div id="notificationsList"></div>
+            </section>
+
+            <section class="recommendations" id="recommendations" style="display: none;">
+                <h3>💡 Personalized Recommendations</h3>
+                <div class="recommendations-grid">
+                    <div class="recommendation-category">
+                        <h4>😴 Sleep</h4>
+                        <ul id="sleepRecommendations"></ul>
+                    </div>
+                    <div class="recommendation-category">
+                        <h4>🏃 Activity</h4>
+                        <ul id="activityRecommendations"></ul>
+                    </div>
+                    <div class="recommendation-category">
+                        <h4>💧 Hydration</h4>
+                        <ul id="hydrationRecommendations"></ul>
+                    </div>
+                    <div class="recommendation-category">
+                        <h4>🍽️ Nutrition</h4>
+                        <ul id="nutritionRecommendations"></ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="features">
+                <h3>🚀 System Features</h3>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🌅</div>
+                        <h4>Morning Health Checkup</h4>
+                        <p>Analyzes your sleep quality and readiness to personalize your day</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏋️</div>
+                        <h4>Smart Workout Suggestions</h4>
+                        <p>Recommends exercise intensity based on your recovery status</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💧</div>
+                        <h4>Dynamic Hydration Reminders</h4>
+                        <p>Adjusts hydration goals based on activity levels and environment</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🍽️</div>
+                        <h4>Meal Timing Optimization</h4>
+                        <p>Suggests optimal nutrition timing around your activities</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h4>Context-Aware Notifications</h4>
+                        <p>Delivers the right message at the right time based on your health data</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📈</div>
+                        <h4>Trend Analysis</h4>
+                        <p>Learns from your patterns to improve recommendations over time</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="technology">
+                <h3>🔧 Technology Stack</h3>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <img src="https://sahha.ai/favicon.ico" alt="Sahha AI" width="24" height="24">
+                        <span>Sahha AI Health Platform</span>
+                    </div>
+                    <div class="tech-item">
+                        <span>🟢</span>
+                        <span>Node.js Backend</span>
+                    </div>
+                    <div class="tech-item">
+                        <span>🔐</span>
+                        <span>OAuth 2.0 Authentication</span>
+                    </div>
+                    <div class="tech-item">
+                        <span>📊</span>
+                        <span>Real-time Health Analytics</span>
+                    </div>
+                    <div class="tech-item">
+                        <span>🔔</span>
+                        <span>Push Notification System</span>
+                    </div>
+                    <div class="tech-item">
+                        <span>🧠</span>
+                        <span>ML-Ready Recommendation Engine</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="github-info">
+                <h3>💻 View the Code</h3>
+                <div class="github-links">
+                    <a href="https://github.com/fivelidz/Sahha_things/tree/smart-reminder-system/projects/smart-reminder-system" class="btn-secondary" target="_blank">
+                        📂 Browse Source Code
+                    </a>
+                    <a href="https://github.com/fivelidz/Sahha_things/blob/smart-reminder-system/projects/smart-reminder-system/AUTH_ISSUES_REPORT.md" class="btn-secondary" target="_blank">
+                        📋 Authentication Report
+                    </a>
+                    <a href="https://github.com/fivelidz/Sahha_things/blob/smart-reminder-system/projects/smart-reminder-system/REQUIREMENTS.md" class="btn-secondary" target="_blank">
+                        📋 Technical Requirements
+                    </a>
+                </div>
+                <div class="install-instructions">
+                    <h4>🚀 Quick Start</h4>
+                    <pre><code>git clone https://github.com/fivelidz/Sahha_things.git
+cd Sahha_things/projects/smart-reminder-system
+npm install
+node src/demo-sleep-notifications.js</code></pre>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Built with ❤️ using Sahha AI • <a href="https://sahha.ai" target="_blank">Learn more about Sahha</a></p>
+        </footer>
+    </div>
+
+    <script src="real-data-api.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
