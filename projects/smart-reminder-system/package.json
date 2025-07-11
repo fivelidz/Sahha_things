@@ -1,0 +1,26 @@
+{
+  "name": "smart-reminder-system",
+  "version": "1.0.0",
+  "description": "Context-aware health reminder system using Sahha AI",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest",
+    "test:api": "node src/test-api.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "dotenv": "^16.3.1",
+    "axios": "^1.5.0",
+    "node-cron": "^3.0.2",
+    "node-notifier": "^10.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "jest": "^29.7.0"
+  },
+  "keywords": ["sahha", "health", "notifications", "reminders"],
+  "author": "",
+  "license": "MIT"
+}
