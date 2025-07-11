@@ -1,4 +1,27 @@
-// Mock data generator (simplified version of the Node.js mock data)
+// Real Sahha data integration with fallback to mock data
+async function generateHealthData() {
+    try {
+        // Try to get real Sahha data first
+        if (window.RealSahhaAPI) {
+            console.log('🔄 Fetching real Sahha health data...');
+            const sahhaAPI = new window.RealSahhaAPI();
+            const realData = await sahhaAPI.getHealthData();
+            console.log('✅ Real Sahha data loaded:', realData);
+            
+            // Add data source indicator
+            realData.data_source = 'real_sahha_api';
+            return realData;
+        }
+    } catch (error) {
+        console.warn('⚠️ Real data fetch failed, using mock data:', error);
+    }
+
+    // Fallback to mock data
+    console.log('🔄 Using mock health data...');
+    return generateMockHealthData();
+}
+
+// Mock data generator (fallback)
 function generateMockHealthData() {
     const generateRandomScore = (min = 0, max = 100) => {
         return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -29,7 +52,8 @@ function generateMockHealthData() {
             activity: [],
             nutrition: [],
             hydration: []
-        }
+        },
+        data_source: 'mock_fallback'
     };
 }
 
@@ -195,23 +219,40 @@ function displayRecommendations(healthData) {
     });
 }
 
+function updateDataSourceIndicator(dataSource) {
+    const indicator = document.getElementById('dataSourceIndicator');
+    if (dataSource === 'real_sahha_api') {
+        indicator.innerHTML = '<span style="background: #4CAF50; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem;">🎉 Using REAL Sahha Health Data</span>';
+    } else {
+        indicator.innerHTML = '<span style="background: #2196F3; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem;">📝 Demo Mode (Mock Data)</span>';
+    }
+}
+
 function showSection(sectionId) {
     document.getElementById(sectionId).style.display = 'block';
 }
 
-function runDemo() {
+async function runDemo() {
     const runButton = document.getElementById('runDemo');
-    runButton.textContent = 'Running...';
+    runButton.textContent = 'Loading Real Data...';
     runButton.disabled = true;
 
-    // Generate mock health data
-    let healthData = generateMockHealthData();
+    // Generate health data (real or mock)
+    let healthData = await generateHealthData();
     healthData = generateRecommendations(healthData);
+
+    // Show data source indicator
+    if (healthData.data_source === 'real_sahha_api') {
+        console.log('🎉 Using REAL Sahha health data!');
+    } else {
+        console.log('📝 Using mock data (real API not available)');
+    }
 
     // Show and update dashboard
     setTimeout(() => {
         showSection('healthDashboard');
         updateMetrics(healthData);
+        updateDataSourceIndicator(healthData.data_source);
     }, 500);
 
     // Show notifications
