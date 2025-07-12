@@ -1,0 +1,29 @@
+{
+  "name": "sahha-health-analytics",
+  "version": "1.0.0",
+  "description": "Comprehensive Sahha API analytics tool for GEO research foundation",
+  "main": "src/test-comprehensive-analysis.js",
+  "scripts": {
+    "start": "node src/test-comprehensive-analysis.js",
+    "analyze": "node src/test-comprehensive-analysis.js",
+    "discover": "node src/sahha-comprehensive-client.js",
+    "test": "npm run analyze"
+  },
+  "keywords": [
+    "sahha",
+    "health-analytics", 
+    "biomarkers",
+    "api-analysis",
+    "geo-research",
+    "ai-optimization"
+  ],
+  "author": "Health Analytics Research",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

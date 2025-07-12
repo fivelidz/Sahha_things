@@ -1,0 +1,46 @@
+{
+  "name": "sahha-projects-unified",
+  "version": "1.0.0",
+  "description": "Unified Sahha health data integration projects - GEO optimization, health analytics, and smart reminders",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "cd projects/sahha-health-analytics && npm install && cd ../sahha-geo-optimization && npm install && cd ../smart-reminder-system && npm install",
+    "test": "npm run test-geo && npm run test-analytics && npm run test-reminders",
+    "test-geo": "node projects/sahha-geo-optimization/examples/geo-demo.js",
+    "test-analytics": "node projects/sahha-health-analytics/src/run-discovery.js || echo 'Run npm run install-all first'",
+    "test-reminders": "node projects/smart-reminder-system/src/test-mock-data.js",
+    "demo": "npm run test",
+    "geo": "node projects/sahha-geo-optimization/examples/geo-demo.js",
+    "analytics": "cd projects/sahha-health-analytics && node src/run-discovery.js",
+    "reminders": "node projects/smart-reminder-system/src/test-mock-data.js",
+    "start": "echo 'Choose a project: npm run geo | npm run analytics | npm run reminders'"
+  },
+  "keywords": [
+    "sahha",
+    "health-data",
+    "api-integration",
+    "geo-optimization",
+    "ai-friendly",
+    "health-analytics",
+    "smart-reminders",
+    "biomarkers",
+    "archetypes"
+  ],
+  "author": "Sahha Research Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fivelidz/Sahha_things.git"
+  },
+  "workspaces": [
+    "projects/sahha-geo-optimization",
+    "projects/sahha-health-analytics", 
+    "projects/smart-reminder-system"
+  ],
+  "devDependencies": {
+    "jest": "^29.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
