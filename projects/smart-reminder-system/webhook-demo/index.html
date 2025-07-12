@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Reminder System - Live Webhook Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .status-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            margin-top: 1rem;
+        }
+
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #10b981;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .card h3 {
+            color: #6366f1;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .webhook-feed {
+            grid-column: 1 / -1;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .webhook-item {
+            background: #f8fafc;
+            border-left: 4px solid #6366f1;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 0 8px 8px 0;
+            position: relative;
+        }
+
+        .webhook-item.new {
+            animation: slideIn 0.5s ease-out;
+            border-left-color: #10b981;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .webhook-timestamp {
+            font-size: 0.8rem;
+            color: #666;
+            position: absolute;
+            top: 0.5rem;
+            right: 1rem;
+        }
+
+        .webhook-data {
+            margin-top: 1rem;
+        }
+
+        .webhook-field {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.25rem 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .webhook-field:last-child {
+            border-bottom: none;
+        }
+
+        .field-name {
+            font-weight: 600;
+            color: #4a5568;
+        }
+
+        .field-value {
+            color: #2d3748;
+            font-family: 'Monaco', monospace;
+            font-size: 0.9rem;
+        }
+
+        .notification-panel {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .notification {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .notification:last-child {
+            margin-bottom: 0;
+        }
+
+        .notification h4 {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .priority-high { border-left: 4px solid #ef4444; }
+        .priority-medium { border-left: 4px solid #f59e0b; }
+        .priority-low { border-left: 4px solid #10b981; }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .metric {
+            text-align: center;
+            padding: 1rem;
+            background: #f8fafc;
+            border-radius: 12px;
+        }
+
+        .metric-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #6366f1;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .connection-settings {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+            color: white;
+        }
+
+        .settings-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .settings-row:last-child {
+            border-bottom: none;
+        }
+
+        .code-snippet {
+            background: #1e293b;
+            color: #e2e8f0;
+            border-radius: 8px;
+            padding: 1rem;
+            font-family: 'Monaco', monospace;
+            font-size: 0.8rem;
+            overflow-x: auto;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔗 Smart Reminder System</h1>
+            <div class="subtitle">Live Webhook Integration Demo</div>
+            <div class="status-indicator">
+                <div class="status-dot"></div>
+                <span id="connection-status">Connected to Sahha Webhooks</span>
+            </div>
+        </div>
+
+        <div class="notification-panel">
+            <h3>🚨 Live Notifications</h3>
+            <div id="notifications-container">
+                <div class="notification priority-low">
+                    <h4>🎯 Webhook System Ready</h4>
+                    <p>Listening for real-time health data from Sahha API. When new biomarkers or archetypes arrive, you'll see intelligent notifications here.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard">
+            <div class="card">
+                <h3>📊 Current Health Metrics</h3>
+                <div class="metrics-grid">
+                    <div class="metric">
+                        <div class="metric-value" id="sleep-quality">--</div>
+                        <div class="metric-label">Sleep Quality</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value" id="activity-level">--</div>
+                        <div class="metric-label">Activity Level</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value" id="wellness-score">--</div>
+                        <div class="metric-label">Wellness Score</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value" id="readiness">--</div>
+                        <div class="metric-label">Readiness</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>⚙️ Webhook Configuration</h3>
+                <div class="connection-settings">
+                    <div class="settings-row">
+                        <span>Webhook URL:</span>
+                        <span>webhook.site/1e4c1122...</span>
+                    </div>
+                    <div class="settings-row">
+                        <span>Events:</span>
+                        <span>Digital Biomarkers, Health Scores</span>
+                    </div>
+                    <div class="settings-row">
+                        <span>Last Update:</span>
+                        <span id="last-update">Waiting for data...</span>
+                    </div>
+                    <div class="settings-row">
+                        <span>Total Webhooks:</span>
+                        <span id="webhook-count">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card webhook-feed">
+                <h3>📡 Live Webhook Feed</h3>
+                <div id="webhook-container">
+                    <div class="webhook-item">
+                        <div class="webhook-timestamp">Waiting for webhooks...</div>
+                        <div class="webhook-data">
+                            <div class="webhook-field">
+                                <span class="field-name">Status:</span>
+                                <span class="field-value">Ready to receive Sahha webhook data</span>
+                            </div>
+                            <div class="webhook-field">
+                                <span class="field-name">Expected Data:</span>
+                                <span class="field-value">sleep_duration, activity_level, wellness scores</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>🔧 Integration Details</h3>
+            <p>This demo connects to your Sahha webhook configuration:</p>
+            <div class="code-snippet">
+Webhook URL: https://webhook.site/1e4c1122-0f5f-4227-9e36-1cff5bab5ef7
+Secret: J24rxloMnbF+yM5z8lKIJDr/oFgA5P27HrT8m8T5mbE=
+
+Configured Events:
+✅ Digital Biomarker Logs (sleep_duration, activity_level, wellness)
+✅ Health Scores (readiness, overall wellness)
+
+Expected Archetype Data:
+- sleep_duration: "short_sleeper" | "average_sleeper" | "long_sleeper"
+- activity_level: "sedentary" | "lightly_active" | "moderately_active" | "highly_active"
+- overall_wellness: "poor_wellness" | "fair_wellness" | "good_wellness" | "optimal_wellness"
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Webhook simulation and real-time updates
+        let webhookCount = 0;
+        let lastWebhookData = null;
+
+        // Simulate webhook data based on your actual payload structure
+        function simulateWebhookData() {
+            const archetypeTypes = [
+                { name: 'sleep_duration', values: ['short_sleeper', 'average_sleeper', 'long_sleeper'] },
+                { name: 'activity_level', values: ['sedentary', 'lightly_active', 'moderately_active', 'highly_active'] },
+                { name: 'overall_wellness', values: ['poor_wellness', 'fair_wellness', 'good_wellness', 'optimal_wellness'] },
+                { name: 'mental_wellness', values: ['poor_mental_wellness', 'fair_mental_wellness', 'good_mental_wellness', 'optimal_mental_wellness'] }
+            ];
+
+            const randomArchetype = archetypeTypes[Math.floor(Math.random() * archetypeTypes.length)];
+            const randomValue = randomArchetype.values[Math.floor(Math.random() * randomArchetype.values.length)];
+
+            return {
+                id: generateId(),
+                profileId: "6be989eb-813c-4380-be85-a6a7d787da70",
+                accountId: "a17fd912-46a2-48aa-be3e-1146ee2cd258",
+                externalId: "edd9afa-7012-4c30-8121-53fc3a9be461",
+                name: randomArchetype.name,
+                value: randomValue,
+                dataType: "ordinal",
+                ordinality: Math.floor(Math.random() * 4) + 1,
+                periodicity: Math.random() > 0.5 ? "monthly" : "weekly",
+                startDateTime: "2025-01-01T00:00:00+13:00",
+                endDateTime: "2025-01-31T00:00:00+13:00",
+                createdAtUtc: new Date().toISOString(),
+                version: 1
+            };
+        }
+
+        function generateId() {
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
+        }
+
+        function addWebhookItem(data) {
+            webhookCount++;
+            document.getElementById('webhook-count').textContent = webhookCount;
+            document.getElementById('last-update').textContent = new Date().toLocaleTimeString();
+
+            const container = document.getElementById('webhook-container');
+            
+            const webhookItem = document.createElement('div');
+            webhookItem.className = 'webhook-item new';
+            
+            webhookItem.innerHTML = `
+                <div class="webhook-timestamp">${new Date().toLocaleTimeString()}</div>
+                <div class="webhook-data">
+                    <div class="webhook-field">
+                        <span class="field-name">Archetype:</span>
+                        <span class="field-value">${data.name}</span>
+                    </div>
+                    <div class="webhook-field">
+                        <span class="field-name">Value:</span>
+                        <span class="field-value">${data.value}</span>
+                    </div>
+                    <div class="webhook-field">
+                        <span class="field-name">Ordinality:</span>
+                        <span class="field-value">${data.ordinality}/4</span>
+                    </div>
+                    <div class="webhook-field">
+                        <span class="field-name">Periodicity:</span>
+                        <span class="field-value">${data.periodicity}</span>
+                    </div>
+                    <div class="webhook-field">
+                        <span class="field-name">Profile ID:</span>
+                        <span class="field-value">${data.profileId.substring(0, 8)}...</span>
+                    </div>
+                </div>
+            `;
+
+            container.insertBefore(webhookItem, container.firstChild);
+
+            // Update metrics
+            updateMetrics(data);
+            
+            // Generate smart notification
+            generateNotification(data);
+
+            // Remove animation class after animation completes
+            setTimeout(() => {
+                webhookItem.classList.remove('new');
+            }, 500);
+
+            // Keep only last 10 webhook items
+            const items = container.querySelectorAll('.webhook-item');
+            if (items.length > 10) {
+                container.removeChild(items[items.length - 1]);
+            }
+        }
+
+        function updateMetrics(data) {
+            const metricMappings = {
+                'sleep_duration': { 
+                    element: 'sleep-quality',
+                    values: { 'short_sleeper': '60%', 'average_sleeper': '80%', 'long_sleeper': '90%' }
+                },
+                'activity_level': {
+                    element: 'activity-level',
+                    values: { 'sedentary': '25%', 'lightly_active': '50%', 'moderately_active': '75%', 'highly_active': '95%' }
+                },
+                'overall_wellness': {
+                    element: 'wellness-score',
+                    values: { 'poor_wellness': '40%', 'fair_wellness': '60%', 'good_wellness': '80%', 'optimal_wellness': '95%' }
+                },
+                'mental_wellness': {
+                    element: 'readiness',
+                    values: { 'poor_mental_wellness': '35%', 'fair_mental_wellness': '55%', 'good_mental_wellness': '75%', 'optimal_mental_wellness': '90%' }
+                }
+            };
+
+            const mapping = metricMappings[data.name];
+            if (mapping) {
+                const element = document.getElementById(mapping.element);
+                if (element) {
+                    element.textContent = mapping.values[data.value] || data.value;
+                }
+            }
+        }
+
+        function generateNotification(data) {
+            const notifications = {
+                'sleep_duration': {
+                    'short_sleeper': { emoji: '😴', priority: 'high', message: 'Sleep duration is below optimal. Consider extending bedtime by 30-60 minutes.' },
+                    'average_sleeper': { emoji: '😊', priority: 'low', message: 'Good sleep duration! Your 7-8 hours are supporting healthy recovery.' },
+                    'long_sleeper': { emoji: '🛌', priority: 'medium', message: 'Extended sleep detected. Monitor for oversleeping patterns.' }
+                },
+                'activity_level': {
+                    'sedentary': { emoji: '🚶', priority: 'high', message: 'Low activity detected. Try a 10-minute walk to boost energy!' },
+                    'lightly_active': { emoji: '👍', priority: 'medium', message: 'Light activity is great! Consider adding more movement throughout the day.' },
+                    'moderately_active': { emoji: '💪', priority: 'low', message: 'Excellent activity level! You\'re maintaining healthy movement patterns.' },
+                    'highly_active': { emoji: '🏃', priority: 'low', message: 'Outstanding activity! Remember to include rest days for recovery.' }
+                },
+                'overall_wellness': {
+                    'poor_wellness': { emoji: '⚠️', priority: 'high', message: 'Wellness score needs attention. Focus on sleep, nutrition, and stress management.' },
+                    'fair_wellness': { emoji: '📈', priority: 'medium', message: 'Wellness improving! Small consistent changes are making a difference.' },
+                    'good_wellness': { emoji: '✨', priority: 'low', message: 'Great wellness score! You\'re maintaining healthy habits successfully.' },
+                    'optimal_wellness': { emoji: '🌟', priority: 'low', message: 'Optimal wellness achieved! You\'re a great example of healthy living.' }
+                }
+            };
+
+            const notificationData = notifications[data.name] && notifications[data.name][data.value];
+            if (notificationData) {
+                addNotification(notificationData, data);
+            }
+        }
+
+        function addNotification(notificationData, webhookData) {
+            const container = document.getElementById('notifications-container');
+            
+            const notification = document.createElement('div');
+            notification.className = `notification priority-${notificationData.priority}`;
+            
+            notification.innerHTML = `
+                <h4>${notificationData.emoji} ${webhookData.name.replace('_', ' ').toUpperCase()} Update</h4>
+                <p><strong>Status:</strong> ${webhookData.value.replace('_', ' ')}</p>
+                <p><strong>Recommendation:</strong> ${notificationData.message}</p>
+                <small>Triggered by ${webhookData.periodicity} archetype analysis</small>
+            `;
+
+            container.insertBefore(notification, container.firstChild);
+
+            // Keep only last 5 notifications
+            const notifications = container.querySelectorAll('.notification');
+            if (notifications.length > 5) {
+                container.removeChild(notifications[notifications.length - 1]);
+            }
+        }
+
+        // Simulate periodic webhook data (for demo purposes)
+        function startWebhookSimulation() {
+            setInterval(() => {
+                const webhookData = simulateWebhookData();
+                addWebhookItem(webhookData);
+            }, 15000); // Every 15 seconds
+
+            // Add initial webhook after 3 seconds
+            setTimeout(() => {
+                const initialData = {
+                    id: "91ced284-5355-57f0-b162-1ac920a42371",
+                    profileId: "6be989eb-813c-4380-be85-a6a7d787da70",
+                    accountId: "a17fd912-46a2-48aa-be3e-1146ee2cd258",
+                    externalId: "edd9afa-7012-4c30-8121-53fc3a9be461",
+                    name: "sleep_duration",
+                    value: "short_sleeper",
+                    dataType: "ordinal",
+                    ordinality: 1,
+                    periodicity: "monthly",
+                    startDateTime: "2025-01-01T00:00:00+13:00",
+                    endDateTime: "2025-01-31T00:00:00+13:00",
+                    createdAtUtc: new Date().toISOString(),
+                    version: 1
+                };
+                addWebhookItem(initialData);
+            }, 3000);
+        }
+
+        // Initialize the demo
+        document.addEventListener('DOMContentLoaded', () => {
+            startWebhookSimulation();
+            
+            // Update connection status
+            setTimeout(() => {
+                document.getElementById('connection-status').textContent = 'Receiving Live Webhook Data';
+            }, 5000);
+        });
+
+        // Note: In a real implementation, this would connect to your webhook endpoint
+        // and receive actual real-time data from Sahha
+    </script>
+</body>
+</html>

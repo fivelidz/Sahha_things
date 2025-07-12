@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "webhook-handler.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/sahha-webhook",
+      "dest": "/webhook-handler.js"
+    },
+    {
+      "src": "/api/webhooks",
+      "dest": "/webhook-handler.js"
+    },
+    {
+      "src": "/api/webhook-stats", 
+      "dest": "/webhook-handler.js"
+    },
+    {
+      "src": "/health",
+      "dest": "/webhook-handler.js"
+    },
+    {
+      "src": "/",
+      "dest": "/index.html"
+    }
+  ],
+  "env": {
+    "WEBHOOK_SECRET": "J24rxloMnbF+yM5z8lKIJDr/oFgA5P27HrT8m8T5mbE="
+  }
+}

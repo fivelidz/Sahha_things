@@ -32,16 +32,21 @@ Comprehensive data discovery and analysis system for Sahha's health data API.
 **Technical Achievements:** Authentication pattern optimization, parallel request strategies, comprehensive error cataloging
 
 ### 🧠 Smart Reminder System (`projects/smart-reminder-system/`)
-Intelligent health reminder system using real Sahha data integration.
+Intelligent health reminder system with **real-time webhook integration** and live Sahha data processing.
 
 **Key Features:**
-- Real-time health data integration with 104+ biomarkers
-- Smart notification algorithms with context awareness
-- Interactive web demo with live health insights
-- Specialized API builders for focused use cases
-- 7-day trend analysis and personalized coaching
+- **Real-time webhook integration** with live health score processing
+- Smart notification algorithms triggered by actual health data changes
+- **Dual demo system**: Static demo + Live webhook-powered demo
+- Intelligent readiness score analysis (93% = "Exceptional Readiness!")
+- Factor-based insights (sleep duration, exercise capacity, recovery status)
+- 7-day trend analysis and personalized coaching based on real metrics
 
-**Live Demo:** [Interactive Web Interface](https://fivelidz.github.io/Sahha_things/projects/smart-reminder-system/web-demo/)
+**Live Demos:** 
+- [Static Demo](https://fivelidz.github.io/Sahha_things/projects/smart-reminder-system/web-demo/) - Always-working showcase
+- [Real-time Webhook Demo](https://sahha-smart-reminders.vercel.app) - Live health data integration
+
+**Documentation:** [Complete Webhook System Guide](projects/smart-reminder-system/WEBHOOK_SYSTEM_GUIDE.md)
 
 ## 🎯 Innovation Highlights
 

@@ -1,0 +1,29 @@
+{
+  "name": "smart-reminder-webhook-demo",
+  "version": "1.0.0",
+  "description": "Real-time Smart Reminder System with Sahha webhook integration",
+  "main": "webhook-handler.js",
+  "scripts": {
+    "start": "node webhook-handler.js",
+    "dev": "nodemon webhook-handler.js",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": [
+    "sahha",
+    "webhooks",
+    "health-data",
+    "smart-reminders",
+    "real-time"
+  ],
+  "author": "Sahha Smart Reminder Team",
+  "license": "MIT"
+}
