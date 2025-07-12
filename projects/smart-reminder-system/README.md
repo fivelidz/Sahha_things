@@ -170,6 +170,13 @@ GET /api/v1/profile/deviceInformation/{profileId}
 - **Low Activity**: Baseline maintenance, habit reinforcement
 - **Hot Weather**: Extra alerts, cooling strategies
 
+## 📚 Documentation
+
+- **[API Usage Guide](API_USAGE_GUIDE.md)** - Complete API integration documentation
+- **[Demo Guide](DEMO_GUIDE.md)** - How to run and customize the demos
+- **[Webhook Integration Guide](docs/webhook-integration-guide.md)** - Real-time webhook setup and usage
+- **[GitHub Hosting Guide](docs/github-hosting-guide.md)** - Deploy to GitHub Pages
+
 ## 📈 Future Enhancements
 
 - [ ] Machine learning for personalized patterns

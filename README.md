@@ -7,44 +7,41 @@ This repository contains multiple innovative projects focused on Sahha health da
 
 ## 📁 Projects
 
-### 🤖 [Sahha GEO Optimization](https://github.com/fivelidz/Sahha_things/tree/sahha-geo-optimization) 
-**Branch: `sahha-geo-optimization`**
-
+### 🤖 Sahha GEO Optimization (`projects/sahha-geo-optimization/`)
 Generative Engine Optimization (GEO) framework for making APIs AI-readable and AI-friendly.
 
 **Key Features:**
 - AI-optimized documentation with copy-paste patterns
-- Complete Sahha API mapping (184 biomarkers, 9 archetypes)
+- Complete Sahha API mapping (184 biomarkers, 14 archetype types)
 - Performance optimization templates (parallel request patterns)
-- Error handling with actionable hints
-- Use case libraries for health scenarios
+- Interactive "What AI Reads" demonstration page
+- Professional GEO website with dark mode
 
 **Research Focus:** AI-first API integration methodology development
 
-### 📊 [Sahha Health Analytics](https://github.com/fivelidz/Sahha_things/tree/sahha-health-analytics)
-**Branch: `sahha-health-analytics`**
-
+### 📊 Sahha Health Analytics (`projects/sahha-health-analytics/`)
 Comprehensive data discovery and analysis system for Sahha's health data API.
 
 **Key Features:**
-- Systematic API endpoint exploration
-- Complete biomarker categorization (sleep, activity, scores)
-- Archetype behavioral pattern mapping
-- Marketing research framework
-- Data structure optimization analysis
+- Systematic API endpoint exploration and discovery tools
+- Complete biomarker categorization (94 sleep + 90 activity biomarkers)
+- Archetype behavioral pattern mapping (9 active + 6 pending types)
+- Marketing research framework for biomarker commercialization
+- Comprehensive user guide and documentation
 
 **Technical Achievements:** Authentication pattern optimization, parallel request strategies, comprehensive error cataloging
 
-### 🧠 [Smart Reminder System](https://github.com/fivelidz/Sahha_things/tree/smart-reminder-system)
-**Branch: `smart-reminder-system`**
-
+### 🧠 Smart Reminder System (`projects/smart-reminder-system/`)
 Intelligent health reminder system using real Sahha data integration.
 
 **Key Features:**
-- Real-time health data integration
-- Smart notification algorithms
-- Personalized reminder scheduling
-- Multi-platform compatibility
+- Real-time health data integration with 104+ biomarkers
+- Smart notification algorithms with context awareness
+- Interactive web demo with live health insights
+- Specialized API builders for focused use cases
+- 7-day trend analysis and personalized coaching
+
+**Live Demo:** [Interactive Web Interface](https://fivelidz.github.io/Sahha_things/projects/smart-reminder-system/web-demo/)
 
 ## 🎯 Innovation Highlights
 
