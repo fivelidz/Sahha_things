@@ -18,7 +18,7 @@
 ## 🧠 Why Sahha Needs GEO
 
 ### Current Challenge:
-- Sahha has 100+ health biomarkers and complex API structures
+- Sahha has extensive health biomarkers and complex API structures
 - Developers spend weeks learning optimal integration patterns
 - AI tools struggle to understand health data relationships
 - Suboptimal implementations are common
@@ -26,7 +26,7 @@
 ### GEO Solution:
 - AI tools instantly understand Sahha's capabilities
 - Automatic selection of optimal API patterns
-- 95% reduction in development time
+- Significant reduction in development time
 - Production-ready implementations from the start
 
 ## 🔬 Research Areas
@@ -163,8 +163,8 @@ sahha.patterns = {
 - **Measurement**: Code review scores, performance benchmarks
 
 ### AI Comprehension
-- **Baseline**: AI tools require 30+ minutes to understand Sahha
-- **Target**: Instant understanding and optimal implementation
+- **Baseline**: AI tools require significant time to understand Sahha
+- **Target**: Rapid understanding and optimal implementation
 - **Measurement**: Token usage, accuracy of implementations
 
 ### Developer Satisfaction
@@ -220,9 +220,9 @@ sahha.patterns = {
 The Smart Reminder System serves as a **proof-of-concept** for GEO principles:
 
 ### GEO Patterns Demonstrated:
-- **Focused API calls**: 4 metrics instead of 104
+- **Focused API calls**: Essential metrics instead of comprehensive data pull
 - **Context-aware notifications**: AI understands health significance
-- **Performance optimization**: 95% reduction in data transfer
+- **Performance optimization**: Significant reduction in data transfer
 - **Use case mapping**: Clear patterns for different scenarios
 
 ### Real-World Validation:
