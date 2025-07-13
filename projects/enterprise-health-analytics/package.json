@@ -1,0 +1,35 @@
+{
+  "name": "enterprise-health-analytics",
+  "version": "1.0.0",
+  "description": "Enterprise biomarker data export system for organizational health analytics",
+  "main": "src/biomarker-exporter.js",
+  "scripts": {
+    "export": "node src/biomarker-exporter.js",
+    "export-team": "node src/team-analytics-exporter.js",
+    "export-trucking": "node src/use-cases/trucking-company-export.js",
+    "export-military": "node src/use-cases/military-platoon-export.js",
+    "generate-sample": "node src/sample-data-generator.js",
+    "analyze": "node src/data-analyzer.js"
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5",
+    "moment": "^2.29.4",
+    "dotenv": "^16.3.1",
+    "axios": "^1.6.2",
+    "commander": "^11.1.0",
+    "chalk": "^4.1.2"
+  },
+  "keywords": [
+    "sahha",
+    "biomarkers",
+    "enterprise",
+    "health-analytics",
+    "data-export",
+    "xlsx",
+    "trucking",
+    "military",
+    "workforce-health"
+  ],
+  "author": "Sahha Enterprise Analytics Team",
+  "license": "MIT"
+}
