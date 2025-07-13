@@ -182,6 +182,64 @@ Sahha_things/
 
 ---
 
+## 📊 **Demo 4: Enterprise Health Analytics - Excel Export System (8 minutes)**
+
+### **What to Show:**
+**Run**: Enterprise analytics with Excel file generation
+
+### **Setup Commands:**
+```bash
+cd projects/enterprise-health-analytics
+npm install
+```
+
+### **Presentation Script:**
+*"Now let me show you how this research translates into enterprise-grade analytics for real organizations like trucking companies and military units."*
+
+#### **Important Clarification (1 minute)**
+*"Before I demonstrate, it's important to note: this system uses realistic sample data generation for demonstration purposes. The 184 biomarkers are based on real Sahha API research, but the exported data is simulated to show system capabilities without requiring real employee health data."*
+
+#### **Part A: General Enterprise Analytics (3 minutes)**
+```bash
+npm run export -- demo --employees 25 --days 30 --organization "DemoCompany"
+```
+
+**Demo Steps:**
+1. **Show**: Real-time generation of realistic sample data (42,000 biomarker records)
+2. **Explain**: "This demonstrates system capabilities using simulated data based on real Sahha research"
+3. **Highlight**: 6 category-specific Excel files created automatically
+4. **Open Excel file**: Show multi-sheet structure (Summary, Raw Data, Biomarker sheets)
+5. **Demonstrate**: Data ready for analysis in Excel, pivot tables, charts
+
+#### **Part B: Trucking Company Analytics (2 minutes)**
+```bash
+npm run export-trucking -- demo --drivers 25 --company "FleetMaster"
+```
+
+**Demo Steps:**
+1. **Show**: Industry-specific biomarker focus (safety, fatigue, compliance)
+2. **Generated reports**:
+   - DOT Compliance Report (federal safety standards)
+   - Safety Risk Assessment (high-risk driver identification)
+   - Driver Performance Metrics (individual and fleet analysis)
+3. **Open Excel report**: Show DOT compliance tracking with pass/fail rates
+
+#### **Part C: Military Unit Analytics (2 minutes)**
+```bash
+npm run export-military -- demo --soldiers 20 --unit "AlphaPlatoon"
+```
+
+**Demo Steps:**
+1. **Show**: Military-specific readiness and performance analytics
+2. **Generated reports**:
+   - Readiness Assessment (deployment certification)
+   - Mission Impact Analysis (operation-specific health effects)
+   - Fitness Standards Compliance (military requirements)
+3. **Open Excel report**: Show readiness levels and deployment status
+
+### **Impact Statement:**
+*"This system provides the framework and capabilities for transforming complex health biomarker data into actionable Excel reports. For real implementation, organizations would integrate with Sahha enterprise accounts and employee health monitoring programs."*
+
 ## 📈 **Business Impact & Market Opportunity (3 minutes)**
 
 ### **What to Show:**

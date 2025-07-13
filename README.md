@@ -48,6 +48,29 @@ Intelligent health reminder system with **real-time webhook integration** and li
 
 **Documentation:** [Complete Webhook System Guide](projects/smart-reminder-system/WEBHOOK_SYSTEM_GUIDE.md)
 
+### 🏢 Enterprise Health Analytics (`projects/enterprise-health-analytics/`)
+Enterprise-grade biomarker data export system for organizational health analytics and compliance monitoring.
+
+**Key Features:**
+- **Industry-specific analytics** for trucking companies and military units
+- **184+ biomarker export** across 6 categories (sleep, activity, heart, mental, body, environment)
+- **Compliance monitoring** with DOT standards and military fitness requirements
+- **Risk assessment frameworks** with high/medium/low scoring
+- **Excel export system** with category-specific files and master summaries
+- **Specialized reporting** (safety, readiness, performance, deployment status)
+
+**Use Cases:**
+- **Trucking Companies**: DOT compliance, driver safety, fatigue management, route optimization
+- **Military Units**: Readiness assessment, deployment certification, mission impact analysis
+- **Corporate Wellness**: Employee health analytics, intervention planning, compliance tracking
+
+**Demo Commands:**
+```bash
+npm run export -- demo --employees 25 --days 30    # General enterprise
+npm run export-trucking -- demo --drivers 50       # Trucking company
+npm run export-military -- demo --soldiers 40      # Military platoon
+```
+
 ## 🎯 Innovation Highlights
 
 ### GEO Methodology (Industry Research)

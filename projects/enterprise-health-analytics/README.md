@@ -6,6 +6,16 @@ Enterprise-grade biomarker data export system designed for organizational health
 
 **Perfect for**: Trucking companies, military units, corporate wellness programs, healthcare organizations, and any enterprise needing comprehensive health data analysis.
 
+## ⚠️ **Important: Data Source Information**
+
+**This system uses realistic sample data generation for demonstration purposes.** The biomarker data is simulated based on real Sahha API research but does not connect to live employee health data. 
+
+- **✅ Real**: 184 biomarkers discovered from actual Sahha API research
+- **🎭 Simulated**: Excel export data generated for demonstration and testing
+- **📋 See**: [DATA_SOURCE_GUIDE.md](DATA_SOURCE_GUIDE.md) for complete details on real vs. simulated data
+
+For real organizational implementation, additional setup with Sahha enterprise accounts and employee consent processes is required.
+
 ## 🚀 Key Features
 
 ### **📊 Comprehensive Data Export**
